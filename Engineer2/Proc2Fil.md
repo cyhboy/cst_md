@@ -66,7 +66,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;[`CreateFolder`](CreateFolder)` folder`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;[`WriteTxt2Tmp`](WriteTxt2Tmp)` resultStr, folder & subb & ".vb"`
+&nbsp;&nbsp;&nbsp;&nbsp;[`WriteTxt2Tmp`](WriteTxt2Tmp)` resultStr, folder & subb & ".bas"`
 `ErrorHandler:`
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 5`
@@ -81,25 +81,7 @@
 
 # BeCaller
 - Proc2Fil{S}(16)->[[RobotRunByParam]]{S}
-- Proc2Fil{S}(51)->[[SearchRegxKwInStr]]{F}
-- Proc2Fil{S}(56)->[[CntSubstring]]{F}
-- Proc2Fil{S}(60)->[[SearchRegxKwInStr]]{F}
-- Proc2Fil{S}(65)->[[CntSubstring]]{F}
-- Proc2Fil{S}(69)->[[SearchRegxKwInStr]]{F}
-- Proc2Fil{S}(74)->[[CntSubstring]]{F}
-- Proc2Fil{S}(92)->[[MatchRegx]]{F}
-- Proc2Fil{S}(95)->[[MatchRegx]]{F}
-- Proc2Fil{S}(96)->[[SearchRegxKwInStr]]{F}
-- Proc2Fil{S}(98)->[[MatchRegx]]{F}
-- Proc2Fil{S}(101)->[[MatchRegx]]{F}
-- Proc2Fil{S}(102)->[[SearchRegxKwInStr]]{F}
-- Proc2Fil{S}(107)->[[MatchRegx]]{F}
-- Proc2Fil{S}(161)->[[MatchRegx]]{F}
-- Proc2Fil{S}(162)->[[SearchRegxKwInStr]]{F}
-- Proc2Fil{S}(164)->[[MatchRegx]]{F}
-- Proc2Fil{S}(165)->[[SearchRegxKwInStr]]{F}
-- Proc2Fil{S}(167)->[[MatchRegx]]{F}
-- Proc2Fil{S}(174)->[[CreateFolder]]{S}
-- Proc2Fil{S}(175)->[[WriteTxt2Tmp]]{S}
-- Proc2Fil{S}(178)->[[MyMsgBox]]{S}
+- Proc2Fil{S}(49)->[[CreateFolder]]{S}
+- Proc2Fil{S}(50)->[[WriteTxt2Tmp]]{S}
+- Proc2Fil{S}(53)->[[MyMsgBox]]{S}
 

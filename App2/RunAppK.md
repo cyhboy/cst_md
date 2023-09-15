@@ -7,6 +7,10 @@
 `End Sub`
 
 
+> [!Getting information]
+> Ribbon path please refer to ==**Customize >> Auto >> RunAppK**==
+
+
 # BeCaller
 - RunAppK{S}(5)->[[RunAppParam]]{S}
 

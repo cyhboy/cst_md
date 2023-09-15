@@ -9,7 +9,7 @@
 
 
 > [!Getting information]
-> Ribbon path please refer to ==**Customize >> Auto >> DLF >> Y2C**==
+> Ribbon path please refer to ==**Customize >> Common >> DLF >> Y2C**==
 
 
 # BeCaller

@@ -1,5 +1,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
-`Public Function ReadPropertyInAppFiles(fileName As String)`
+`Public Function ReadPropertyInAppFiles(filename As String)`
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Function`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
@@ -8,7 +8,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim sPFSpec, sSect As String`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`
-&nbsp;&nbsp;&nbsp;&nbsp;`sPFSpec = `[`GetAppDrive`](GetAppDrive)`() & "\" & fileName`
+&nbsp;&nbsp;&nbsp;&nbsp;`sPFSpec = `[`GetAppDrive`](GetAppDrive)`() & "\" & filename`
 &nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox sPFSpec`
 &nbsp;&nbsp;&nbsp;&nbsp;`Set dicProps = CreateObject("Scripting.Dictionary")`
 &nbsp;&nbsp;&nbsp;&nbsp;`Set oTS = fso.OpenTextFile(sPFSpec)`

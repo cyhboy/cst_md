@@ -1,5 +1,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
-`Public Sub DlParam(hold As Boolean)`
+`Public Sub DlParam(Hold As Boolean)`
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
@@ -83,7 +83,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`If hold Then`
+&nbsp;&nbsp;&nbsp;&nbsp;`If Hold Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim exeName As String: exeName = `[`ExtractEXE`](ExtractEXE)`(path)`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While True = `[`IsExeRunning`](IsExeRunning)`(exeName)`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Sleep 3000`

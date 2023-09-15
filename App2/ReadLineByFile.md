@@ -1,5 +1,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
-`Public Function ReadLineByFile(fileName As String)`
+`Public Function ReadLineByFile(filename As String)`
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Function`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
@@ -11,7 +11,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim readResult As String`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`
-&nbsp;&nbsp;&nbsp;&nbsp;`Set fro = fso.OpenTextFile(fileName, ForReading)`
+&nbsp;&nbsp;&nbsp;&nbsp;`Set fro = fso.OpenTextFile(filename, ForReading)`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`readResult = fro.readall`
 &nbsp;&nbsp;&nbsp;&nbsp;

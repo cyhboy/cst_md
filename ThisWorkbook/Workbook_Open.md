@@ -68,7 +68,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`
-&nbsp;&nbsp;&nbsp;&nbsp;`Next`
+&nbsp;&nbsp;&nbsp;&nbsp;`Next obj`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Set mFileObject = Nothing`
 &nbsp;&nbsp;&nbsp;&nbsp;`Set cFileObject = Nothing`

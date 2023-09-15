@@ -1,5 +1,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
-`Public Sub PowerShellRun(cmd As String, hold As Boolean)`
+`Public Sub PowerShellRun(cmd As String, Hold As Boolean)`
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`

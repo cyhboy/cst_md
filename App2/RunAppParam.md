@@ -1,13 +1,28 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
-`Public Sub RunAppParam(isHold As Boolean, isTest As Boolean, isKeep As Boolean)`
+`Public Sub RunAppParam(isHold As Boolean, isTest As Boolean, isKeep As Boolean, Optional isCll As Boolean = False, Optional loc As String = "middle")`
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 10)`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim currentColumn As Integer`
+&nbsp;&nbsp;&nbsp;&nbsp;`If isCll Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`currentColumn = ActiveCell.Column`
+&nbsp;&nbsp;&nbsp;&nbsp;`Else`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`currentColumn = 10`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, currentColumn)`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`If loc = "next" Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim tempAry As Variant`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`tempAry = Split(parameter, "::")`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = tempAry(UBound(tempAry))`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox parameter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'Exit Sub`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim arr As Variant`
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -53,9 +68,9 @@
 
 
 # BeCaller
-- RunAppParam{S}(30)->[[ReadPropertyInAppFiles]]{F}
-- RunAppParam{S}(33)->[[ShellRunHide]]{S}
-- RunAppParam{S}(35)->[[ShellRun]]{S}
-- RunAppParam{S}(38)->[[ExtractEXE]]{F}
-- RunAppParam{S}(39)->[[IsExeRunning]]{F}
+- RunAppParam{S}(41)->[[ReadPropertyInAppFiles]]{F}
+- RunAppParam{S}(43)->[[ShellRunHide]]{S}
+- RunAppParam{S}(45)->[[ShellRun]]{S}
+- RunAppParam{S}(48)->[[ExtractEXE]]{F}
+- RunAppParam{S}(49)->[[IsExeRunning]]{F}
 

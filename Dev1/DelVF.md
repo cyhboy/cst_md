@@ -21,19 +21,29 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim localFolder As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim fileName As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim filename As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim orgFileName As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim videoFileName, audioFileName As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`
 &nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Cells(currentRow, 9)`
-&nbsp;&nbsp;&nbsp;&nbsp;`fileName = Cells(currentRow, 13)`
-&nbsp;&nbsp;&nbsp;&nbsp;`orgFileName = Left(fileName, InStrRev(fileName, ".") - 1)`
+&nbsp;&nbsp;&nbsp;&nbsp;`filename = Cells(currentRow, 13)`
+&nbsp;&nbsp;&nbsp;&nbsp;`orgFileName = Left(filename, InStrRev(filename, ".") - 1)`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileList As Variant`
-&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList)`(localFolder & orgFileName & ".f*")`
+&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList)`(localFolder & orgFileName & ".*")`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox Dir(localFolder & orgFileName & ".*")`
+&nbsp;&nbsp;&nbsp;&nbsp;`'Exit Sub`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`If UBound(fileList) < 1 Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`If UBound(fileList) < 2 Then`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`videoFileName = fileList(1)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`GoTo DELETE_FILE`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox videoFileName`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileSize As Double`
@@ -43,6 +53,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim myFileObj As Object`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim myFile As Variant`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each myFile In fileList`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set myFileObj = fso.GetFile(localFolder & CStr(myFile))`
@@ -57,6 +69,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`
 &nbsp;&nbsp;&nbsp;&nbsp;
+`DELETE_FILE:`
 &nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox)` "delete video file in row? " & videoFileName, "Yes", "No", 5`
 &nbsp;&nbsp;&nbsp;&nbsp;`If confirmation = "No" Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
@@ -81,14 +94,14 @@
 
 
 > [!Getting information]
-> Ribbon path please refer to ==**Customize >> Auto >> DelVF**==
+> Ribbon path please refer to ==**Customize >> Common >> DelVF**==
 
 
 # BeCaller
 - DelVF{S}(15)->[[RobotRunByParam]]{S}
 - DelVF{S}(30)->[[GetFileList]]{F}
-- DelVF{S}(49)->[[MyQuestionBox]]{S}
-- DelVF{S}(57)->[[ShellRun]]{S}
-- DelVF{S}(58)->[[ExtractEXE]]{F}
-- DelVF{S}(59)->[[IsExeRunning]]{F}
+- DelVF{S}(54)->[[MyQuestionBox]]{S}
+- DelVF{S}(62)->[[ShellRun]]{S}
+- DelVF{S}(63)->[[ExtractEXE]]{F}
+- DelVF{S}(64)->[[IsExeRunning]]{F}
 

@@ -36,7 +36,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' Enhanced for youtube-dl`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim command As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`command = Cells(currentRow, 10)`
-&nbsp;&nbsp;&nbsp;&nbsp;`If InStr(command, "youtube-dl") > 0 Then`
+&nbsp;&nbsp;&nbsp;&nbsp;`If InStr(command, "youtube-dl") > 0 Or InStr(command, "yt-dlp") > 0 Then`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\cyy\Desktop\youtube.com_cookies.txt", strDirectory & "youtube.com_cookies.txt", True, True`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`

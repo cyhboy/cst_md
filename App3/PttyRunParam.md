@@ -1,5 +1,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
-`Public Sub PttyRunParam(hold As Boolean)`
+`Public Sub PttyRunParam(Hold As Boolean)`
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
@@ -34,6 +34,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`port = "22"`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkPath As String: ppkPath = ""`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFile As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`ppkFile = Cells(currentRow, 14)`
+&nbsp;&nbsp;&nbsp;&nbsp;`If `[`EndsWith`](EndsWith)`(ppkFile, ".ppk") Or ppkFile = "private_key" Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFolder As String`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkFolder = Cells(currentRow, 13)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkPath = ppkFolder & ppkFile`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`If Trim(pass) = "" Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'ruid = Environ$("username")`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim propsMap As Variant`
@@ -59,6 +68,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = fqdn & " -l " & uid & " -pw " & pass & " -P " & port & " -m """ & commandPath & """ -t"`
 &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`If ppkPath <> "" Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = fqdn & " -l " & uid & " -i """ & ppkPath & """ -P " & port & " -m """ & commandPath & """ -t"`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim cntEXE As Integer`
 &nbsp;&nbsp;&nbsp;&nbsp;`cntEXE = `[`CntExeRunning`](CntExeRunning)`(ExtractEXE(path))`
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -67,7 +80,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;[`ShellRunMax`](ShellRunMax)` path & parameter`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`If hold Then`
+&nbsp;&nbsp;&nbsp;&nbsp;`If Hold Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While `[`CntExeRunning`](CntExeRunning)`(ExtractEXE(path)) - cntEXE > 0`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Sleep 3000`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Wend`
@@ -83,11 +96,12 @@
 
 # BeCaller
 - PttyRunParam{S}(8)->[[GetAppDrive]]{F}
-- PttyRunParam{S}(29)->[[ReadPropertyInAppFiles]]{F}
-- PttyRunParam{S}(33)->[[GetBakDrive]]{F}
-- PttyRunParam{S}(37)->[[WriteTxt2Tmp]]{S}
-- PttyRunParam{S}(39)->[[WriteTxt2Tmp]]{S}
-- PttyRunParam{S}(43)->[[CntExeRunning]]{F}
-- PttyRunParam{S}(44)->[[ShellRunMax]]{S}
-- PttyRunParam{S}(52)->[[MyMsgBox]]{S}
+- PttyRunParam{S}(30)->[[EndsWith]]{F}
+- PttyRunParam{S}(37)->[[ReadPropertyInAppFiles]]{F}
+- PttyRunParam{S}(41)->[[GetBakDrive]]{F}
+- PttyRunParam{S}(45)->[[WriteTxt2Tmp]]{S}
+- PttyRunParam{S}(47)->[[WriteTxt2Tmp]]{S}
+- PttyRunParam{S}(54)->[[CntExeRunning]]{F}
+- PttyRunParam{S}(55)->[[ShellRunMax]]{S}
+- PttyRunParam{S}(63)->[[MyMsgBox]]{S}
 

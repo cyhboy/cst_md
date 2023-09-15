@@ -4,22 +4,25 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`'    On Error GoTo LineHandler`
-&nbsp;&nbsp;&nbsp;&nbsp;`'    Dim subName As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`'362:     Err.Raise 1979`
-&nbsp;&nbsp;&nbsp;&nbsp;`'LineHandler:`
-&nbsp;&nbsp;&nbsp;&nbsp;`'    If Err.Number = 1979 Then`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        subName = GetSubName("AllSpecial", Erl)`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        If subName = "" Then`
-&nbsp;&nbsp;&nbsp;&nbsp;`'            MsgBox "Process name is not available. Please contact administrator. "`
-&nbsp;&nbsp;&nbsp;&nbsp;`'            'Exit Sub`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        Else`
-&nbsp;&nbsp;&nbsp;&nbsp;`'            LogToDB subName`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        End If`
-&nbsp;&nbsp;&nbsp;&nbsp;`'    End If`
-&nbsp;&nbsp;&nbsp;&nbsp;`'    Resume Next`
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`On Error GoTo ErrorHandler`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim n As Integer`
+&nbsp;&nbsp;&nbsp;&nbsp;`n = Selection.count`
+&nbsp;&nbsp;&nbsp;&nbsp;`If n > 1 Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n = Selection.SpecialCells(xlCellTypeVisible).count`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;`If n > 1 Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim curCell As Range`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`For Each curCell In Selection`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`curCell.Select`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox subName`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRunByParam`](RobotRunByParam)` "PttyMD"`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Next curCell`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`
@@ -56,11 +59,20 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 2) & " -l " & uid & " -pw " & pass & " -m """ & commandPath & """ -t"`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim cntEXE As Integer`
+&nbsp;&nbsp;&nbsp;&nbsp;`cntEXE = CntExeRunning(ExtractEXE(path))`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;[`ShellRunHide`](ShellRunHide)` path & parameter`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim exeName As String: exeName = `[`ExtractEXE`](ExtractEXE)`(path)`
-&nbsp;&nbsp;&nbsp;&nbsp;`While True = `[`IsExeRunning`](IsExeRunning)`(exeName)`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Sleep 5000`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim killFlag As Boolean`
+&nbsp;&nbsp;&nbsp;&nbsp;`While CntExeRunning(ExtractEXE(path)) - cntEXE > 0 And killFlag = False`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Sleep 3000`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If Now - LastModDate("C:\BAK\putty.log") > 3000 / 1000 / 60 / 24 Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MyQuestionBox "Do U want to kill", "Yes", "No", 6`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'If confirmation = "Yes" Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'killFlag = KillExeRunning(ExtractEXE(path))`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'End If`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;`Wend`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim pttyResult As String`
@@ -77,13 +89,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`'    If "On" = ReadRegAR() Then`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        Dim exer As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        exer = Cells(currentRow, 16)`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        If InStr(exer, subName) = 0 Then`
-&nbsp;&nbsp;&nbsp;&nbsp;`'            Cells(currentRow, 16) = Trim(exer & " " & subName)`
-&nbsp;&nbsp;&nbsp;&nbsp;`'        End If`
-&nbsp;&nbsp;&nbsp;&nbsp;`'    End If`
 `End Sub`
 
 
@@ -92,14 +97,13 @@
 
 
 # BeCaller
-- PttyMD{S}(9)->[[GetAppDrive]]{F}
-- PttyMD{S}(16)->[[GetBakDrive]]{F}
-- PttyMD{S}(19)->[[WriteTxt2Tmp]]{S}
-- PttyMD{S}(22)->[[WriteTxt2Tmp]]{S}
-- PttyMD{S}(25)->[[ReadPropertyInAppFiles]]{F}
-- PttyMD{S}(29)->[[ShellRunHide]]{S}
-- PttyMD{S}(30)->[[ExtractEXE]]{F}
-- PttyMD{S}(31)->[[IsExeRunning]]{F}
-- PttyMD{S}(35)->[[SearchRegxKwInFile]]{F}
-- PttyMD{S}(43)->[[MyMsgBox]]{S}
+- PttyMD{S}(16)->[[RobotRunByParam]]{S}
+- PttyMD{S}(24)->[[GetAppDrive]]{F}
+- PttyMD{S}(31)->[[GetBakDrive]]{F}
+- PttyMD{S}(34)->[[WriteTxt2Tmp]]{S}
+- PttyMD{S}(37)->[[WriteTxt2Tmp]]{S}
+- PttyMD{S}(40)->[[ReadPropertyInAppFiles]]{F}
+- PttyMD{S}(44)->[[ShellRunHide]]{S}
+- PttyMD{S}(52)->[[SearchRegxKwInFile]]{F}
+- PttyMD{S}(60)->[[MyMsgBox]]{S}
 

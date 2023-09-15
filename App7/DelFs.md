@@ -47,7 +47,7 @@
 
 
 > [!Getting information]
-> Ribbon path please refer to ==**Customize >> Auto >> DelFs**==
+> Ribbon path please refer to ==**Customize >> Common >> DelFs**==
 
 
 # BeCaller

@@ -53,6 +53,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`port = "22"`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkPath As String: ppkPath = ""`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFile As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`ppkFile = Cells(currentRow, 14)`
+&nbsp;&nbsp;&nbsp;&nbsp;`If `[`EndsWith`](EndsWith)`(ppkFile, ".ppk") Or ppkFile = "private_key" Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFolder As String`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkFolder = Cells(currentRow, 13)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkPath = ppkFolder & ppkFile`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`If pass = "" Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim propsMap As Variant`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set propsMap = `[`ReadPropertyInAppFiles`](ReadPropertyInAppFiles)`("identity.ini")`
@@ -70,6 +79,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;[`WriteTxt2Tmp`](WriteTxt2Tmp)` "cd " & remoteFolder & Chr(13) & Chr(10) & cmd & Chr(13) & Chr(10) & "exit", commandPath`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = fqdn & " -l " & uid & " -pw " & pass & " -P " & port & " -m """ & commandPath & """ -t"`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`If ppkPath <> "" Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = fqdn & " -l " & uid & " -i """ & ppkPath & """ -P " & port & " -m """ & commandPath & """ -t"`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim cntEXE As Integer`
 &nbsp;&nbsp;&nbsp;&nbsp;`cntEXE = `[`CntExeRunning`](CntExeRunning)`(ExtractEXE(path))`
@@ -110,11 +123,12 @@
 # BeCaller
 - PttyRA{S}(15)->[[RobotRunByParam]]{S}
 - PttyRA{S}(21)->[[GetAppDrive]]{F}
-- PttyRA{S}(41)->[[ReadPropertyInAppFiles]]{F}
-- PttyRA{S}(45)->[[GetBakDrive]]{F}
-- PttyRA{S}(48)->[[WriteTxt2Tmp]]{S}
-- PttyRA{S}(51)->[[CntExeRunning]]{F}
-- PttyRA{S}(52)->[[ShellRunStd]]{S}
-- PttyRA{S}(61)->[[ReadLineByFile]]{F}
-- PttyRA{S}(63)->[[LastModDate]]{F}
+- PttyRA{S}(42)->[[EndsWith]]{F}
+- PttyRA{S}(49)->[[ReadPropertyInAppFiles]]{F}
+- PttyRA{S}(53)->[[GetBakDrive]]{F}
+- PttyRA{S}(56)->[[WriteTxt2Tmp]]{S}
+- PttyRA{S}(62)->[[CntExeRunning]]{F}
+- PttyRA{S}(63)->[[ShellRunStd]]{S}
+- PttyRA{S}(72)->[[ReadLineByFile]]{F}
+- PttyRA{S}(74)->[[LastModDate]]{F}
 

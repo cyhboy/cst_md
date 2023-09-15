@@ -14,5 +14,5 @@
 
 
 > [!Getting information]
-> Ribbon path please refer to ==**Extra >> Common Extra >> Init >> InitIe**==
+> Ribbon path please refer to ==**Customize >> Common >> Init >> InitIe**==
 

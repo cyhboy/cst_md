@@ -27,13 +27,35 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`'GoTo SECOND_STAGE`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 10)`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim resultStr As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`resultStr = Cells(currentRow, 10)`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim formatCode As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`formatCode = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, " best", "http", True)`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim origFile As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`origFile = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "::ffmpeg -i """, """")`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim audioFile As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`audioFile = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, " -acodec copy """, """")`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(parameter, "http") > 0 Then`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "http", "$", True)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "http", "$$", True)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While InStr(parameter, vbLf) > 0`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox "vbLf"`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "http", vbLf, True)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Wend`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While InStr(parameter, vbCr) > 0`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox "vbCr"`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "http", vbCr, True)`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Wend`
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = ""`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox parameter`
+&nbsp;&nbsp;&nbsp;&nbsp;`'Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim cmdStr As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`' cmdStr = "conda activate learn"`
@@ -46,15 +68,40 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim jsonStr As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`jsonStr = Cells(currentRow, 18)`
-&nbsp;&nbsp;&nbsp;&nbsp;`jsonStr = `[`CutStrByStartEnd`](CutStrByStartEnd)`(jsonStr, "{", "$", True)`
+&nbsp;&nbsp;&nbsp;&nbsp;`jsonStr = `[`CutStrByStartEnd`](CutStrByStartEnd)`(jsonStr, "{", "$$", True)`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim Json As Object`
 &nbsp;&nbsp;&nbsp;&nbsp;`Set Json = JsonConverter.ParseJson(jsonStr)`
-&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 1) = `[`Json`](Json)`("subtitles")`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim cmdResult As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim subtitles As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`subtitles = `[`Json`](Json)`("subtitles")`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 1) = subtitles`
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 2) = `[`Json`](Json)`("filesizeString")`
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 3) = `[`Json`](Json)`("view_count")`
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 4) = "'" & `[`Json`](Json)`("upload_date")`
-&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 8) = Replace(Cells(currentRow, 8), formatCode, " " & `[`Json`](Json)`("formatCode") & " ")`
-&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 10) = Replace(Cells(currentRow, 10), formatCode, " " & `[`Json`](Json)`("formatCode") & " ")`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim rplFormatCode As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`rplFormatCode = " " & `[`Json`](Json)`("formatCode") & " "`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`If Not (subtitles = "subtitles0[]" Or subtitles = "subtitles0" Or subtitles = "subtitlesErr" Or subtitles = "subtitlesNil") Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`rplFormatCode = rplFormatCode & "--write-sub --sub-lang en,en-US,en-GB,zh,zh-CN,zh-HK,zh-TW,zh-Hans,zh-Hant --convert-subs srt "`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`resultStr = Replace(resultStr, formatCode, rplFormatCode)`
+&nbsp;&nbsp;&nbsp;&nbsp;`resultStr = Replace(resultStr, origFile, `[`Json`](Json)`("videoFileName"))`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim extStr As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`extStr = `[`Json`](Json)`("videoFileName")`
+&nbsp;&nbsp;&nbsp;&nbsp;`extStr = Right(extStr, Len(extStr) - InStrRev(extStr, ".") + 1)`
+&nbsp;&nbsp;&nbsp;&nbsp;`If extStr = "webm" Then`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`resultStr = Replace(resultStr, audioFile, Replace(Json("videoFileName"), extStr, ".opus"))`
+&nbsp;&nbsp;&nbsp;&nbsp;`Else`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`resultStr = Replace(resultStr, audioFile, Replace(Json("videoFileName"), extStr, ".wma"))`
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 10) = resultStr`
+&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 8) = resultStr`
+&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 13) = "'" & `[`Json`](Json)`("videoFileName")`
 &nbsp;&nbsp;&nbsp;&nbsp;
 `End Sub`
@@ -66,13 +113,19 @@
 
 # BeCaller
 - PlyVA{S}(15)->[[RobotRunByParam]]{S}
-- PlyVA{S}(25)->[[CutStrByStartEnd]]{F}
 - PlyVA{S}(27)->[[CutStrByStartEnd]]{F}
-- PlyVA{S}(33)->[[ShellRunResult]]{F}
-- PlyVA{S}(36)->[[CutStrByStartEnd]]{F}
-- PlyVA{S}(39)->[[Json]]{F}
-- PlyVA{S}(40)->[[Json]]{F}
-- PlyVA{S}(41)->[[Json]]{F}
-- PlyVA{S}(42)->[[Json]]{F}
-- PlyVA{S}(45)->[[Json]]{F}
+- PlyVA{S}(29)->[[CutStrByStartEnd]]{F}
+- PlyVA{S}(31)->[[CutStrByStartEnd]]{F}
+- PlyVA{S}(33)->[[CutStrByStartEnd]]{F}
+- PlyVA{S}(35)->[[CutStrByStartEnd]]{F}
+- PlyVA{S}(38)->[[CutStrByStartEnd]]{F}
+- PlyVA{S}(45)->[[ShellRunResult]]{F}
+- PlyVA{S}(48)->[[CutStrByStartEnd]]{F}
+- PlyVA{S}(53)->[[Json]]{F}
+- PlyVA{S}(55)->[[Json]]{F}
+- PlyVA{S}(56)->[[Json]]{F}
+- PlyVA{S}(57)->[[Json]]{F}
+- PlyVA{S}(59)->[[Json]]{F}
+- PlyVA{S}(66)->[[Json]]{F}
+- PlyVA{S}(75)->[[Json]]{F}
 

@@ -7,14 +7,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim fileName As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`fileName = Cells(currentRow, 11)`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim filename As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`filename = Cells(currentRow, 11)`
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim localFolder As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Cells(currentRow, 9)`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim filePath As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`filePath = localFolder & fileName`
-&nbsp;&nbsp;&nbsp;&nbsp;`If InStr(fileName, ".doc") > 0 Then`
+&nbsp;&nbsp;&nbsp;&nbsp;`filePath = localFolder & filename`
+&nbsp;&nbsp;&nbsp;&nbsp;`If InStr(filename, ".doc") > 0 Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`TouchDoc`](TouchDoc)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`
@@ -44,6 +44,6 @@
 
 
 # BeCaller
-- Touch{S}(12)->[[TouchDoc]]{S}
-- Touch{S}(26)->[[MyMsgBox]]{S}
+- Touch{S}(14)->[[TouchDoc]]{S}
+- Touch{S}(28)->[[MyMsgBox]]{S}
 

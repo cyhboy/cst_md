@@ -30,11 +30,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim localFolder As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Cells(currentRow, 9)`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim fileName As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`fileName = Cells(currentRow, 11)`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim filename As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`filename = Cells(currentRow, 11)`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileContent As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`fileContent = `[`ReadLineByFile`](ReadLineByFile)`(localFolder & fileName)`
+&nbsp;&nbsp;&nbsp;&nbsp;`fileContent = `[`ReadLineByFile`](ReadLineByFile)`(localFolder & filename)`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(fileContent, comment & vbCrLf) > 0 Then`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 10) = Replace(fileContent, comment & vbCrLf, "")`

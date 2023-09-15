@@ -37,11 +37,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim localPath As String`
 &nbsp;&nbsp;&nbsp;&nbsp;`localPath = Cells(currentRow, 9)`
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim fileName As String`
-&nbsp;&nbsp;&nbsp;&nbsp;`fileName = Cells(currentRow, 11)`
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim filename As String`
+&nbsp;&nbsp;&nbsp;&nbsp;`filename = Cells(currentRow, 11)`
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;[`RplTxt4Fil`](RplTxt4Fil)` localPath & fileName, orgTxt, newTxt`
+&nbsp;&nbsp;&nbsp;&nbsp;[`RplTxt4Fil`](RplTxt4Fil)` localPath & filename, orgTxt, newTxt`
 &nbsp;&nbsp;&nbsp;&nbsp;
 `ErrorHandler:`
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`
