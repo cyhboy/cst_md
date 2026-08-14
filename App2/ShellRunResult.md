@@ -32,10 +32,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim wsh As Object`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set wsh = VBA.CreateObject("WScript.Shell")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim waitOnReturn As Boolean: waitOnReturn = True`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim windowStyle As Integer: windowStyle = vbNormal`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim windowStyle As Integer`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If hideFlag Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`windowStyle = vbHide`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`windowStyle = 0`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Else`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`windowStyle = 1`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`wsh.Run path, windowStyle, waitOnReturn`  
@@ -77,5 +79,5 @@
 
 # BeCaller
 - ShellRunResult]]{F}(7)->[[TchFil]]{S}
-- ShellRunResult]]{F}(26)->[[ReadLineByFileUTF8]]{F}
+- ShellRunResult]]{F}(28)->[[ReadLineByFileUTF8]]{F}
 

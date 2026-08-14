@@ -53,7 +53,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim index As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`index = InStrRev(fileOrFolder, "/")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`fileOrFolder = Left(fileOrFolder, index)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If pass = "" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If uid = "" And pass = "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`uid = Environ$("username")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim propsMap As Variant`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set propsMap = `[`ReadPropertyInAppFiles`](ReadPropertyInAppFiles)`("identity.ini")`  
@@ -73,7 +73,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = parameter & " " & """" & "lcd """"" & localFolder & """"""""`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim i As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`For i = 0 To UBound(fileSetArr)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If InStr(fileSetArr(i), ".xls") > 0 Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If InStr(fileSetArr(i), ".xls") > 0 Or InStr(fileSetArr(i), ".rdb") > 0 Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = parameter & " " & """" & "option transfer binary" & """"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = parameter & " " & """" & "option transfer ascii" & """"`  
@@ -81,19 +81,26 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = parameter & " " & """" & "get """"" & fileSetArr(i) & """"""""`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Next i`  
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = parameter & " " & """" & "exit" & """"`  
-&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox path & parameter`  
-&nbsp;&nbsp;&nbsp;&nbsp;`'Exit Sub`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun)` path & parameter, True`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox path & parameter`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim myresults As GlobalConfig.results`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;`myresults = `[`ShellRunResult`](ShellRunResult)`(path & parameter, "C:\BAK\cmd.log", False, False, currentRow)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Cells(myresults.rowNum, 20) = "'" & myresults.resultStr`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;`' ShellRun path & parameter, False`  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If Hold Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim exeName As String: exeName = `[`ExtractEXE`](ExtractEXE)`(path)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While True = `[`IsExeRunning`](IsExeRunning)`(exeName)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Sleep 5000`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Wend`  
-&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
+`'    If Hold Then`  
+`'        Dim exeName As String: exeName = ExtractEXE(path)`  
+`'        MsgBox "exeName: " & exeName`  
+`'`  
+`'        While True = IsExeRunning(exeName)`  
+`'            Sleep 5000`  
+`'        Wend`  
+`'    End If`  
 `End Sub`  
 
 
@@ -102,8 +109,6 @@
 - ScpDlParam{S}(8)->[[GetAppDrive]]{F}
 - ScpDlParam{S}(42)->[[EndsWith]]{F}
 - ScpDlParam{S}(53)->[[ReadPropertyInAppFiles]]{F}
-- ScpDlParam{S}(73)->[[ShellRun]]{S}
-- ScpDlParam{S}(76)->[[MyMsgBox]]{S}
-- ScpDlParam{S}(79)->[[ExtractEXE]]{F}
-- ScpDlParam{S}(80)->[[IsExeRunning]]{F}
+- ScpDlParam{S}(74)->[[ShellRunResult]]{F}
+- ScpDlParam{S}(78)->[[MyMsgBox]]{S}
 

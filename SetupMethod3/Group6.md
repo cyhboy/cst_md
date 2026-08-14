@@ -7,6 +7,10 @@
 `End Sub`  
 
 
+> [!Getting information]
+> Ribbon path please refer to ==**Customize >> Common >> Group6**==
+
+
 # BeCaller
 - Group6{S}(5)->[[Grp]]{S}
 

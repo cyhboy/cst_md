@@ -60,7 +60,7 @@
 
 
 > [!Getting information]
-> Ribbon path please refer to ==**Customize >> Common >> MTest**==
+> Ribbon path please refer to ==**Visual >> Execution >> MTest**==
 
 
 # BeCaller

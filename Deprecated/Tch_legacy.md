@@ -18,7 +18,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`filePath1 = "C:\AppFiles\linux.txt"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim result As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Not fso.FileExists(localFolder & fileName) Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`result = fso.copyfile(filePath1, localFolder & fileName)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`result = fso.CopyFile(filePath1, localFolder & fileName)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If result = "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MsgBox "copied linux file done"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  

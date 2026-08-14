@@ -45,14 +45,14 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 9) & Cells(currentRow, 11)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox `[`FileExists`](FileExists)`(parameter)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox FolderExists(parameter)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox `[`FolderExists`](FolderExists)`(parameter)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`FileExists`](FileExists)`(parameter) Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = FolderExists(parameter) Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`FolderExists`](FolderExists)`(parameter) Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -75,5 +75,6 @@
 - DelFs{S}(18)->[[RobotRun]]{S}
 - DelFs{S}(25)->[[MyQuestionBox]]{S}
 - DelFs{S}(37)->[[FileExists]]{F}
-- DelFs{S}(42)->[[ShellRunResult]]{F}
+- DelFs{S}(40)->[[FolderExists]]{F}
+- DelFs{S}(45)->[[ShellRunResult]]{F}
 

@@ -3,10 +3,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;`On Error Resume Next`  
+&nbsp;&nbsp;&nbsp;&nbsp;`'On Error Resume Next`  
 `'    If Application.WindowState <> xlMinimized Then`  
 `'        Application.WindowState = xlMinimized`  
 `'    End If`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;`If ActiveWorkbook.ActiveSheet.Name = "Info" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox)` "format info sheet or not? ", "No", "Yes", "", 5`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If confirmation = "No" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ActiveWorkbook.Sheets("Sheet1").Activate`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Call PDPH`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If ActiveWorkbook.Name = "cst_template.xlsm" Then`  
@@ -32,11 +39,12 @@
 
 
 # BeCaller
-- FmtSht{S}(7)->[[RstDt]]{S}
-- FmtSht{S}(9)->[[CreTitl]]{S}
-- FmtSht{S}(11)->[[FitScr]]{S}
-- FmtSht{S}(12)->[[Sample]]{S}
-- FmtSht{S}(13)->[[DrawTbl]]{S}
-- FmtSht{S}(14)->[[Frz]]{S}
-- FmtSht{S}(15)->[[RstCf]]{S}
+- FmtSht{S}(6)->[[MyQuestionBox]]{S}
+- FmtSht{S}(12)->[[RstDt]]{S}
+- FmtSht{S}(14)->[[CreTitl]]{S}
+- FmtSht{S}(16)->[[FitScr]]{S}
+- FmtSht{S}(17)->[[Sample]]{S}
+- FmtSht{S}(18)->[[DrawTbl]]{S}
+- FmtSht{S}(19)->[[Frz]]{S}
+- FmtSht{S}(20)->[[RstCf]]{S}
 

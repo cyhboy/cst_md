@@ -32,8 +32,8 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fldr As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim resultStr As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' fldr = "C:\SANDBOX\VB_SPACE\GIT_CST_PROJECT\" & Format(Now, "yyyyMMdd") & "\" & module & "\"`  
-&nbsp;&nbsp;&nbsp;&nbsp;`fldr = "C:\SANDBOX\VB_SPACE\GIT_CST_PROJECT\cst_lts\" & module & "\"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`fldr = "C:\SANDBOX\VB_SPACE\GIT_CST_PROJECT\" & Format(Now, "yyyyMMdd") & "\" & module & "\"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' fldr = "C:\SANDBOX\VB_SPACE\GIT_CST_PROJECT\cst_lts\" & module & "\"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`resultStr = `[`ReadLineByFile`](ReadLineByFile)`(fldr & subb & ".bas")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim funcStr As String`  
@@ -118,47 +118,48 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 28) = ""`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 29) = ""`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`1  TagProcRun resultStr, "^ *(On Error .*)", True, True, 21`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 1`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(On Error .*)", True, True, 21`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 2`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(n = Selection.SpecialCells\(xlCellTypeVisible\)\.count)", True, False, 24`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 3`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(Set .* = CreateObject\(""Scripting.FileSystemObject""\))", True, True, 25`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 4`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(Set objWMI = GetObject.*)", True, True, 26`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 5`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(cn.Open .*)", True, True, 27`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`2  TagProcRun resultStr, "^ *(n = Selection.SpecialCells\(xlCellTypeVisible\)\.count)", True, False, 24`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`3  TagProcRun resultStr, "^ *(Set .* = CreateObject\(""Scripting.FileSystemObject""\))", True, True, 25`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`4  TagProcRun resultStr, "^ *(Set objWMI = GetObject.*)", True, True, 26`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`5  TagProcRun resultStr, "^ *(cn.Open .*)", True, True, 27`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`TagProcRun resultStr, "^ *[^ ]+ = (MyQuestionBox\([^,\r]+\))", True, True, 29`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`6  TagProcRun resultStr, "^ *(Set fso = Nothing)", True, False, 30`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`7  TagProcRun resultStr, "^ *MsgBox ""Please setup repository database. """, True, False, 31`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`8  TagProcRun resultStr, "[ \(](ActiveWorkbook.FullName)", True, False, 32`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`9  TagProcRun resultStr, "[\.]Application.Cells.Find", True, False, 33`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`10 TagProcRun resultStr, "(SearchRegxKwInStrMultToList\([^,\r]+, [^,\r]+, [^,\r]+, [^,\r\)]+\))", True, True, 36`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`20 TagProcRun resultStr, "(SearchRegxKwInStr\([^,\r]+, [^,\r]+\))", True, True, 37`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`30  TagProcRun resultStr, "(SearchRegxKwInFileMultToList\([^,\r]+, [^,\r]+, [^,\r\)]+\))", True, True, 38`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`40  TagProcRun resultStr, "(SearchRegxKwInStrToList\([^,\r]+, [^,\r]+\))", True, True, 39`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`50 TagProcRun resultStr, "(SearchRegxKwInFile\([^,\r]+, [^,\r]+\))", True, True, 40`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`60  TagProcRun resultStr, "\\([^ ""\.\\]+\.vbs)", True, True, 41`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`70  TagProcRun resultStr, "\\([^ ""\.\\]+\.jar)", True, True, 42`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`80  TagProcRun resultStr, "\\([^ ""\.\\]+\.exe)", True, True, 43`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`90  TagProcRun resultStr, "\\([^ ""\.\\]+\.ps1)", True, True, 44`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`11   TagProcRun resultStr, "^ *(Set .* = CreateObject\(""Shell.Application""\).*)", True, False, 45`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`21   TagProcRun resultStr, "^ *(Set .* = CreateObject\(""InternetExplorer.Application""\).*)", True, False, 46`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *[^ ]+ = (MyQuestionBox\([^,\r]+\))", True, True, 29`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 6`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(Set fso = Nothing)", True, False, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 7`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *MsgBox ""Please setup repository database. """, True, False, 31`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 8`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "[ \(](ActiveWorkbook.FullName)", True, False, 32`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 9`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "[\.]Application.Cells.Find", True, False, 33`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 10`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "(SearchRegxKwInStrMultToList\([^,\r]+, [^,\r]+, [^,\r]+, [^,\r\)]+\))", True, True, 36`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 20`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "(SearchRegxKwInStr\([^,\r]+, [^,\r]+\))", True, True, 37`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "(SearchRegxKwInFileMultToList\([^,\r]+, [^,\r]+, [^,\r\)]+\))", True, True, 38`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 40`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "(SearchRegxKwInStrToList\([^,\r]+, [^,\r]+\))", True, True, 39`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 50`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "(SearchRegxKwInFile\([^,\r]+, [^,\r]+\))", True, True, 40`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 60`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "\\([^ ""\.\\]+\.vbs)", True, True, 41`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 70`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "\\([^ ""\.\\]+\.jar)", True, True, 42`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 80`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "\\([^ ""\.\\]+\.exe)", True, True, 43`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 90`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "\\([^ ""\.\\]+\.ps1)", True, True, 44`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 11`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(Set .* = CreateObject\(""Shell.Application""\).*)", True, False, 45`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' 21`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TagProcRun`](TagProcRun)` resultStr, "^ *(Set .* = CreateObject\(""InternetExplorer.Application""\).*)", True, False, 46`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
@@ -183,4 +184,13 @@
 - TagProc{S}(63)->[[CntSubstring]]{F}
 - TagProc{S}(67)->[[SearchRegxKwInStr]]{F}
 - TagProc{S}(72)->[[CntSubstring]]{F}
+- TagProc{S}(79)->[[TagProcRun]]{S}
+- TagProc{S}(83)->[[TagProcRun]]{S}
+- TagProc{S}(86)->[[TagProcRun]]{S}
+- TagProc{S}(87)->[[TagProcRun]]{S}
+- TagProc{S}(88)->[[TagProcRun]]{S}
+- TagProc{S}(94)->[[TagProcRun]]{S}
+- TagProc{S}(95)->[[TagProcRun]]{S}
+- TagProc{S}(96)->[[TagProcRun]]{S}
+- TagProc{S}(97)->[[TagProcRun]]{S}
 

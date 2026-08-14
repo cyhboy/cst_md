@@ -87,13 +87,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = " -sftp -l " & uid & " -pw " & pass & " -P " & port & " -p """ & hn & ":" & fileOrFolder & """ """ & localFolder & """"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;`If fileOrFolder = "*" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = " -r" & parameter`  
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox path & parameter`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If Hold Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If Hold Or True Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim pyResult As GlobalConfig.results`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult)`(path & parameter, "C:\BAK\cmd.log", False, False, currentRow)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(pyResult.rowNum, 20) = pyResult.resultStr`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` pyResult.resultStr, 15, False, True`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRunMax`](ShellRunMax)` path & parameter`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' ShellRunStd path & parameter`  
@@ -120,7 +125,8 @@
 - DlParam{S}(39)->[[EndsWith]]{F}
 - DlParam{S}(45)->[[EndsWith]]{F}
 - DlParam{S}(52)->[[ReadPropertyInAppFiles]]{F}
-- DlParam{S}(65)->[[ShellRunResult]]{F}
-- DlParam{S}(68)->[[ShellRunMax]]{S}
-- DlParam{S}(72)->[[MyMsgBox]]{S}
+- DlParam{S}(68)->[[ShellRunResult]]{F}
+- DlParam{S}(70)->[[MyMsgBox]]{S}
+- DlParam{S}(72)->[[ShellRunMax]]{S}
+- DlParam{S}(76)->[[MyMsgBox]]{S}
 

@@ -30,7 +30,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`  
 &nbsp;&nbsp;&nbsp;&nbsp;`FnLstFil = filePath`  
 `End Function`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
 
 
 # BeCaller

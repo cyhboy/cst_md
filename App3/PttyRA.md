@@ -107,13 +107,15 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'Sleep 1000`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim pttyResult As String`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim pttyResultStr As String`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`pttyResult = `[`ReadLineByFile`](ReadLineByFile)`("C:\BAK\putty.log")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`pttyResultStr = `[`ReadLineByFile`](ReadLineByFile)`("C:\BAK\putty.log")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 18) = "'" & pttyResult`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 18) = "'" & pttyResultStr`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 12) = `[`LastModDate`](LastModDate)`("C:\BAK\putty.log")`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` pttyResultStr, 15, False, True`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'    If Err.Number <> 0 Then`  
@@ -132,4 +134,5 @@
 - PttyRA{S}(61)->[[ShellRunResult]]{F}
 - PttyRA{S}(63)->[[ReadLineByFile]]{F}
 - PttyRA{S}(65)->[[LastModDate]]{F}
+- PttyRA{S}(66)->[[MyMsgBox]]{S}
 

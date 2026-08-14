@@ -40,8 +40,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileName As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`fileName = Cells(currentRow, 11)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`RplTxt4Fil`](RplTxt4Fil)` localPath & fileName, orgTxt, newTxt`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim resultFlag As Boolean`  
+&nbsp;&nbsp;&nbsp;&nbsp;`resultFlag = `[`RplTxt4Fil`](RplTxt4Fil)`(localPath & fileName, orgTxt, newTxt)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
@@ -52,6 +52,6 @@
 
 # BeCaller
 - RplFil{S}(16)->[[RobotRun]]{S}
-- RplFil{S}(34)->[[RplTxt4Fil]]{S}
-- RplFil{S}(37)->[[MyMsgBox]]{S}
+- RplFil{S}(35)->[[RplTxt4Fil]]{F}
+- RplFil{S}(38)->[[MyMsgBox]]{S}
 

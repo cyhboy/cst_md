@@ -10,10 +10,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 10)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim Folder As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Folder = Cells(currentRow, 9)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(Folder, "\") Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Folder = Left(Folder, Len(Folder) - 1)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Dim folder As String`  
+&nbsp;&nbsp;&nbsp;&nbsp;`folder = Cells(currentRow, 9)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(folder, "\") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`folder = Left(folder, Len(folder) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' folder = Replace(folder, "\", "\\")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -43,7 +43,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' after pyinstaller build the python file`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' cmdStr = "C:\AppFiles\ipy\obmp4\obmp4.exe """ & parameter & """" & " " & """" & folder & """" & " " & """" & output_name & """"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cmdStr = "C:\AppFiles\ipy\obvdbyid\obvdbyid.exe" & " " & """" & Folder & """" & " " & """" & output_name & """"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cmdStr = "C:\AppFiles\ipy\obvdbyid\obvdbyid.exe" & " " & """" & folder & """" & " " & """" & output_name & """"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox cmdStr`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  

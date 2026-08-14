@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`On Error GoTo ErrorHandler`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' On Error GoTo ErrorHandler`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Fold`](Fold)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -92,25 +92,31 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = " -sftp -l " & uid & " -pw " & pass & " -P " & port & " -p """ & localFolder & specialFile & """" & " """ & hn & ":" & fileOrFolder & """"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;`If specialFile = "*" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = " -r" & parameter`  
+&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox path & parameter`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' ShellRunMax path & parameter`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If Hold Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If Hold Or True Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim pyResult As GlobalConfig.results`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult)`(path & parameter, "C:\BAK\cmd.log", False, False, currentRow)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(pyResult.rowNum, 20) = pyResult.resultStr`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` pyResult.resultStr, 15, False, True`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRunMax`](ShellRunMax)` path & parameter`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' ShellRunStd path & parameter`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`ErrorHandler:`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
-&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
+`'ErrorHandler:`  
+`'    If Err.Number <> 0 Then`  
+`'        MyMsgBox Err.Number & " " & Err.Description, 30`  
+`'    End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `'    If Hold Then`  
 `'        Dim exeName As String: exeName = ExtractEXE(path)`  
@@ -124,12 +130,12 @@
 
 
 # BeCaller
-- UlParam{S}(6)->[[Fold]]{S}
-- UlParam{S}(10)->[[GetAppDrive]]{F}
-- UlParam{S}(40)->[[EndsWith]]{F}
-- UlParam{S}(46)->[[EndsWith]]{F}
-- UlParam{S}(53)->[[ReadPropertyInAppFiles]]{F}
-- UlParam{S}(66)->[[ShellRunResult]]{F}
-- UlParam{S}(69)->[[ShellRunMax]]{S}
-- UlParam{S}(73)->[[MyMsgBox]]{S}
+- UlParam{S}(5)->[[Fold]]{S}
+- UlParam{S}(9)->[[GetAppDrive]]{F}
+- UlParam{S}(39)->[[EndsWith]]{F}
+- UlParam{S}(45)->[[EndsWith]]{F}
+- UlParam{S}(52)->[[ReadPropertyInAppFiles]]{F}
+- UlParam{S}(68)->[[ShellRunResult]]{F}
+- UlParam{S}(70)->[[MyMsgBox]]{S}
+- UlParam{S}(72)->[[ShellRunMax]]{S}
 

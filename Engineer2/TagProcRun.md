@@ -10,7 +10,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`If isRegx Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If MatchRegx(resultStr, keyword) Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If isMulti Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, colNumber) = Join(SearchRegxKwInStrMultToList(resultStr, keyword, 0, True), Chr(10))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim search_list As Variant`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`search_list = `[`SearchRegxKwInStrMultToList`](SearchRegxKwInStrMultToList)`(resultStr, keyword, 0, True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, colNumber) = Join(search_list, Chr(10))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, colNumber) = `[`SearchRegxKwInStr`](SearchRegxKwInStr)`(resultStr, keyword, True)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -20,5 +22,6 @@
 
 
 # BeCaller
-- TagProcRun{S}(12)->[[SearchRegxKwInStr]]{F}
+- TagProcRun{S}(11)->[[SearchRegxKwInStrMultToList]]{F}
+- TagProcRun{S}(14)->[[SearchRegxKwInStr]]{F}
 

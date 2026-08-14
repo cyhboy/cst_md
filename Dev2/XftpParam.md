@@ -63,7 +63,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Left(localFolder, Len(localFolder) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If pass = "" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If uid = "" And pass = "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'uid = Environ$("username")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim propsMap As Variant`  
@@ -72,16 +72,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`pass = propsMap("AD_PASSWORD")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`parameter = "sftp://" & uid & ":" & pass & "@" & fqdn & ":" & port & fileOrFolder`  
-&nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If ppkPath <> "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = "sftp://" & uid & "@" & fqdn & ":" & port & fileOrFolder & " /privatekey=" & ppkPath`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Else`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = "sftp://" & uid & ":" & pass & "@" & fqdn & ":" & port & fileOrFolder`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If `[`URLEncode`](URLEncode)`(localFolder) <> ReadIniFileString("Configuration\Interface\Commander\LocalPanel", "LastPath") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`URLEncode`](URLEncode)`(localFolder)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox ReadIniFileString("Configuration\Interface\Commander\LocalPanel", "LastPath")`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MsgBox WriteIniFileString("Configuration\Interface\Commander\LocalPanel", "LastPath", `[`URLEncode`](URLEncode)`(localFolder))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`WriteIniFileString`](WriteIniFileString)`("Configuration\Interface\Commander\LocalPanel", "LastPath", `[`URLEncode`](URLEncode)`(localFolder))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim write_result As String`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`write_result = `[`WriteIniFileString`](WriteIniFileString)`("Configuration\Interface\Commander\LocalPanel", "LastPath", `[`URLEncode`](URLEncode)`(localFolder))`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox path & parameter`  
@@ -111,7 +113,8 @@
 - XftpParam{S}(32)->[[EndsWith]]{F}
 - XftpParam{S}(46)->[[EndsWith]]{F}
 - XftpParam{S}(51)->[[ReadPropertyInAppFiles]]{F}
-- XftpParam{S}(58)->[[URLEncode]]{F}
-- XftpParam{S}(61)->[[ShellRunMax]]{S}
-- XftpParam{S}(64)->[[MyMsgBox]]{S}
+- XftpParam{S}(59)->[[URLEncode]]{F}
+- XftpParam{S}(61)->[[WriteIniFileString]]{F}
+- XftpParam{S}(63)->[[ShellRunMax]]{S}
+- XftpParam{S}(66)->[[MyMsgBox]]{S}
 

@@ -88,7 +88,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`myresults = `[`ShellRunResult`](ShellRunResult)`(path, "C:\BAK\cmd.log", True, False, currentRow)`  
+&nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(myresults.rowNum, 20) = "'" & myresults.resultStr`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` myresults.resultStr, 15, False, True`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Cells(currentRow, 21) = LastModDate("C:\BAK\cmd.log")`  
 `End Sub`  
@@ -102,4 +104,5 @@
 - RunAppRA{S}(18)->[[RobotRunByParams]]{S}
 - RunAppRA{S}(63)->[[MyMsgBox]]{S}
 - RunAppRA{S}(66)->[[ShellRunResult]]{F}
+- RunAppRA{S}(68)->[[MyMsgBox]]{S}
 

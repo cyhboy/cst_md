@@ -4,24 +4,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`On Error GoTo ErrorHandler`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' On Error GoTo ErrorHandler`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Dim n As Integer`  
-&nbsp;&nbsp;&nbsp;&nbsp;`n = Selection.count`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If n > 1 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`n = Selection.SpecialCells(xlCellTypeVisible).count`  
-&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If n > 1 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim curCell As Range`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`For Each curCell In Selection`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`curCell.Select`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox subName`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun)` "PttyMD"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Next curCell`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
-&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
+`'    Dim n As Integer`  
+`'    n = Selection.count`  
+`'    If n > 1 Then`  
+`'        n = Selection.SpecialCells(xlCellTypeVisible).count`  
+`'    End If`  
+`'    If n > 1 Then`  
+`'        Dim curCell As Range`  
+`'        For Each curCell In Selection`  
+`'            If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
+`'                curCell.Select`  
+`'                'MsgBox subName`  
+`'                RobotRun "PttyMD"`  
+`'            End If`  
+`'        Next curCell`  
+`'        Exit Sub`  
+`'    End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -94,9 +94,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`pttyResult = `[`SearchRegxKwInFile`](SearchRegxKwInFile)`("C:\BAK\putty.log", "(fail)")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If pttyResult = "" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` "Server Folder Created Successfully", 5`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` "Server Folder Created Successfully", 15, False, True`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` "Server Folder Fail To Create", 5`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` "Server Folder Fail To Create", 15, False, True`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `'    Dim killFlag As Boolean`  
@@ -112,10 +112,10 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`ErrorHandler:`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
-&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
+`'ErrorHandler:`  
+`'    If Err.Number <> 0 Then`  
+`'        MyMsgBox Err.Number & " " & Err.Description, 30`  
+`'    End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `End Sub`  
 
@@ -125,15 +125,13 @@
 
 
 # BeCaller
-- PttyMD{S}(16)->[[RobotRun]]{S}
-- PttyMD{S}(24)->[[GetAppDrive]]{F}
-- PttyMD{S}(33)->[[GetBakDrive]]{F}
-- PttyMD{S}(41)->[[WriteTxt2Code]]{S}
-- PttyMD{S}(46)->[[EndsWith]]{F}
-- PttyMD{S}(56)->[[ReadPropertyInAppFiles]]{F}
-- PttyMD{S}(59)->[[ShellRunResult]]{F}
-- PttyMD{S}(61)->[[SearchRegxKwInFile]]{F}
-- PttyMD{S}(63)->[[MyMsgBox]]{S}
-- PttyMD{S}(65)->[[MyMsgBox]]{S}
-- PttyMD{S}(69)->[[MyMsgBox]]{S}
+- PttyMD{S}(8)->[[GetAppDrive]]{F}
+- PttyMD{S}(17)->[[GetBakDrive]]{F}
+- PttyMD{S}(25)->[[WriteTxt2Code]]{S}
+- PttyMD{S}(30)->[[EndsWith]]{F}
+- PttyMD{S}(40)->[[ReadPropertyInAppFiles]]{F}
+- PttyMD{S}(43)->[[ShellRunResult]]{F}
+- PttyMD{S}(45)->[[SearchRegxKwInFile]]{F}
+- PttyMD{S}(47)->[[MyMsgBox]]{S}
+- PttyMD{S}(49)->[[MyMsgBox]]{S}
 

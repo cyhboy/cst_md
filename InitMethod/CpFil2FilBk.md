@@ -17,7 +17,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim result As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`result = fso.copyfile(filePath1, filePath2)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`result = fso.CopyFile(filePath1, filePath2)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If displayFlag Then`  

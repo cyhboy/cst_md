@@ -1,5 +1,5 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-`Public Function GetLstFilenameByKw(Folder As String, likeStr As String, rtnType As Integer) As String`  
+`Public Function GetLstFilenameByKw(folder As String, likeStr As String, rtnType As Integer) As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Function`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -7,7 +7,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim mysource As Variant`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Set mysource = fso.GetFolder(Folder)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Set mysource = fso.GetFolder(folder)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileName1 As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim date1 As Date`  

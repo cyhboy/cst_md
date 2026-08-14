@@ -53,7 +53,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim cookie_time As Date`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(command, "youtube") > 0 And InStr(command, "yt-dlp") > 0 Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cookie_time = `[`LastModDate`](LastModDate)`("C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt")`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff)`("s", cookie_time, Now()) > 800 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt") = "" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff)`("s", cookie_time, Now()) > 300 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt") = "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ExCookies`](ExCookies)` "https://www.youtube.com/"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` strDirectory & "youtube.com_cookies.txt"`  
