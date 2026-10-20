@@ -16,9 +16,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MsgBox "Section Or Key To Read Not Specified !!!", vbExclamation, "INI"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sProfileString = ""`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`RetStr = `[`Space`](Space)`(128)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`RetStr = `[`Space`](Space.md)`(128)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`StrSize = Len(RetStr)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Worked = `[`GetPrivateProfileString`](GetPrivateProfileString)`(Sect, Keyname, "", RetStr, StrSize, IniFileName)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Worked = `[`GetPrivateProfileString`](GetPrivateProfileString.md)`(Sect, Keyname, "", RetStr, StrSize, IniFileName)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If Worked Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`iNoOfCharInIni = Worked`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sIniString = Left$(RetStr, Worked)`  

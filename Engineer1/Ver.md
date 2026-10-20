@@ -2,7 +2,7 @@
 `Public Sub Ver()`  
 &nbsp;&nbsp;&nbsp;&nbsp;`testing = True`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'On Error GoTo ErrorHandler`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CntOfficeUI`](CntOfficeUI)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CntOfficeUI`](CntOfficeUI.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fso, fileObject As Object`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim addInsPath As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'    addInsPath = "C:\Program Files\Microsoft Office\Office14\Library\cst.xlam"`  
@@ -26,7 +26,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`testing = False`  
 `End Sub`  

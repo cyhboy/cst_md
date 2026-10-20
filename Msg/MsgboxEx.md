@@ -22,9 +22,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim lThread As Long`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'Set up the CBT hook`  
-&nbsp;&nbsp;&nbsp;&nbsp;`lhInst = `[`GetWindowLong`](GetWindowLong)`(GetForegroundWindow, GWL_HINSTANCE)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`lThread = `[`GetCurrentThreadId`](GetCurrentThreadId)`()`  
-&nbsp;&nbsp;&nbsp;&nbsp;`zlhHook = `[`SetWindowsHookEx`](SetWindowsHookEx)`(WH_CBT, AddressOf zWindowProc, lhInst, lThread)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`lhInst = `[`GetWindowLong`](GetWindowLong.md)`(GetForegroundWindow, GWL_HINSTANCE)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`lThread = `[`GetCurrentThreadId`](GetCurrentThreadId.md)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`zlhHook = `[`SetWindowsHookEx`](SetWindowsHookEx.md)`(WH_CBT, AddressOf zWindowProc, lhInst, lThread)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`zePosition = Position`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  

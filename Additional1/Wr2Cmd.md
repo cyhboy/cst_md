@@ -56,9 +56,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim filePath As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`filePath = localFolder & specialFile`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox filePath`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` filePath`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`WriteTxt2Code`](WriteTxt2Code)` resultStr, filePath`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile)` filePath`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile.md)` filePath`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`WriteTxt2Code`](WriteTxt2Code.md)` resultStr, filePath`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile.md)` filePath`  
 `'ErrorHandler:`  
 `'    If Err.Number <> 0 Then`  
 `'        MyMsgBox Err.Number & " " & Err.Description, 30`  

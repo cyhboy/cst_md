@@ -4,8 +4,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`sourceFolder = `[`NormalizePath`](NormalizePath)`(sourceFolder)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`destFolder = `[`NormalizePath`](NormalizePath)`(destFolder)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`sourceFolder = `[`NormalizePath`](NormalizePath.md)`(sourceFolder)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`destFolder = `[`NormalizePath`](NormalizePath.md)`(destFolder)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fso As Object`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`  
@@ -18,7 +18,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`fso.CreateFolder destFolder`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`CopyFolderContents`](CopyFolderContents)` fso, sourceFolder, destFolder`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`CopyFolderContents`](CopyFolderContents.md)` fso, sourceFolder, destFolder`  
 `End Sub`  
 
 

@@ -8,7 +8,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim sPFSpec, sSect As String`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`sPFSpec = `[`GetAppDrive`](GetAppDrive)`() & "\" & fileName`  
+&nbsp;&nbsp;&nbsp;&nbsp;`sPFSpec = `[`GetAppDrive`](GetAppDrive.md)`() & "\" & fileName`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox sPFSpec`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set dicProps = CreateObject("Scripting.Dictionary")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set oTS = fso.OpenTextFile(sPFSpec)`  

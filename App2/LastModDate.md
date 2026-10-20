@@ -13,7 +13,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(filePath, "\") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(filePath, "\") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set fileObject = fso.GetFolder(filePath)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set fileObject = fso.GetFile(filePath)`  

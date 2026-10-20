@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Function`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(strFolder, "\") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(strFolder, "\") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strFolder = Left(strFolder, Len(strFolder) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`GetParentFolder = Left(strFolder, InStrRev(strFolder, "\") - 1)`  

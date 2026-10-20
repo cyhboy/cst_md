@@ -10,7 +10,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`If Sect = "" Or Keyname = "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MsgBox "Section Or Key To Write Not Specified !!!", vbExclamation, "INI"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Worked = `[`WritePrivateProfileString`](WritePrivateProfileString)`(Sect, Keyname, Wstr, IniFileName)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Worked = `[`WritePrivateProfileString`](WritePrivateProfileString.md)`(Sect, Keyname, Wstr, IniFileName)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If Worked Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`iNoOfCharInIni = Worked`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sIniString = Wstr`  

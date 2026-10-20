@@ -4,8 +4,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If `[`TypeName`](TypeName)`(garr) <> "String()" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`garr = `[`EmptyStringArray`](EmptyStringArray)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If `[`TypeName`](TypeName.md)`(garr) <> "String()" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`garr = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`ReDim Preserve garr(LBound(garr) To UBound(garr) + 1)`  

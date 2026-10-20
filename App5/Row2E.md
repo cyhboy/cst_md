@@ -57,7 +57,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`'Call InsSeq`  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 10`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 10`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `End Sub`  

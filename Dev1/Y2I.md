@@ -3,12 +3,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim findOut_douyin As Range`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set findOut_douyin = Cells.Find(What:="www.douyin.com", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=True, SearchFormat:=False)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Not findOut_douyin Is Nothing Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`OBO`](OBO)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RDR`](RDR)` 6, 13, 15`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`OBO`](OBO.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RDR`](RDR.md)` 6, 13, 15`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim findOut As Range`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set findOut = Cells.Find(What:="D:\intelligence\", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=True, SearchFormat:=False)`  

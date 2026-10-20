@@ -10,8 +10,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`With fldr`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.Title = "Select a Folder"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.AllowMultiSelect = False`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.InitialFileName = `[`GetParentFolderName`](GetParentFolderName)`(GetParentFolderName(myPath))`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'.InitialFileName = `[`GetParentFolderName`](GetParentFolderName)`(myPath)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.InitialFileName = `[`GetParentFolderName`](GetParentFolderName.md)`(GetParentFolderName(myPath))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'.InitialFileName = `[`GetParentFolderName`](GetParentFolderName.md)`(myPath)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If .Show <> -1 Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`GoTo NextCode`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  

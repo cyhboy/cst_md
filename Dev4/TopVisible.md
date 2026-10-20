@@ -13,7 +13,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim visibleTop As Double`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim topCnt As Integer`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`SltX`](SltX)` colNum`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`SltX`](SltX.md)` colNum`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set rng = Selection.Cells`  
@@ -28,7 +28,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`topCnt = `[`Fix`](Fix)`(visibleCnt * rate)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`topCnt = `[`Fix`](Fix.md)`(visibleCnt * rate)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If topCnt > maxNum + 1 Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`topCnt = maxNum + 1`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  

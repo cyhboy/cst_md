@@ -13,7 +13,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`wbname = ActiveWorkbook.Name`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim srchFolder As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(wbname, "_videos.xlsm") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(wbname, "_videos.xlsm") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`srchFolder = paramArr(UBound(paramArr) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`matchPath = param`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  

@@ -6,12 +6,12 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If coding Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim mcode As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`mcode = `[`Proc2FilFun`](Proc2FilFun)`("Y2X")`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`mcode = `[`Proc2FilFun`](Proc2FilFun.md)`("Y2X")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MsgBox mcode`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FVC`](FVC)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FVC`](FVC.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
@@ -32,7 +32,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`wbname = ActiveWorkbook.Name`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim srchFolder As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(wbname, "_videos.xlsm") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(wbname, "_videos.xlsm") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`srchFolder = paramArr(UBound(paramArr) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`matchPath = param`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
@@ -43,21 +43,21 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim replaceStr As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If StartsWith(matchPath, "D:\") Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`replaceStr = `[`SoldFun`](SoldFun)`(param)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`replaceStr = `[`SoldFun`](SoldFun.md)`(param)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`replaceStr = Replace(replaceStr, "D:\", "C:\Users\" & Environ$("username") & "\Desktop\youtube\")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`replaceStr = `[`SoldFun`](SoldFun)`(param)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`replaceStr = `[`SoldFun`](SoldFun.md)`(param)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox matchPath`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox replaceStr`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim findOut_youtube As Range`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set findOut_youtube = Cells.Find(What:="www.youtube.com", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=True, SearchFormat:=False)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Not findOut_youtube Is Nothing Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RDR`](RDR)` 17`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RDR`](RDR.md)` 17`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim findOut As Range`  

@@ -10,7 +10,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Not fso.FolderExists(fso.GetParentFolderName(path)) Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CreateFolder`](CreateFolder)` fso.GetParentFolderName(path)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CreateFolder`](CreateFolder.md)` fso.GetParentFolderName(path)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`fso.CreateFolder path`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`  

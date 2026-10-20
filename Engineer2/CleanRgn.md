@@ -5,7 +5,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ActiveCell.CurrentRegion.Select`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Selection.Rows.count > 1 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnSltTitle`](UnSltTitle)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnSltTitle`](UnSltTitle.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Selection.ClearContents`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `End Sub`  

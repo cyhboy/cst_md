@@ -7,7 +7,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' Check if the file exists`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Dir(filePath) <> "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Set the file attribute to hidden`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`SetAttr`](SetAttr)` filePath, vbHidden`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`SetAttr`](SetAttr.md)` filePath, vbHidden`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `End Sub`  

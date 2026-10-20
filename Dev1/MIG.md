@@ -35,13 +35,13 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim pyResult As GlobalConfig.results`  
-&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult)`(cmdStr, "C:\BAK\cmd.log", False, False, currentRow)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult.md)`(cmdStr, "C:\BAK\cmd.log", False, False, currentRow)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(pyResult.rowNum, 18) = "'" & pyResult.resultStr`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim findOut1 As Range`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set findOut1 = Cells.Find(What:="D:\Songs\", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=True, SearchFormat:=False)`  

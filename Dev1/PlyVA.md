@@ -14,7 +14,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`curCell.Select`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox subName`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun)` "PlyVA"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun.md)` "PlyVA"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Next curCell`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
@@ -32,30 +32,30 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`resultStr = Cells(currentRow, 10)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim formatCode As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`formatCode = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, " best", "http", True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`formatCode = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(parameter, " best", "http", True)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim orgTitleText As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(parameter, " -metadata title=") > 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`orgTitleText = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, " -metadata title=", " -metadata album=", True, True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`orgTitleText = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(parameter, " -metadata title=", " -metadata album=", True, True)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`orgTitleText = " -metadata album="`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim origFile As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`origFile = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "::ffmpeg -i """, """")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`origFile = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(parameter, "::ffmpeg -i """, """")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim audioFile As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`audioFile = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, " -acodec copy """, """")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`audioFile = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(parameter, " -acodec copy """, """")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(parameter, "http") > 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "http", "$$", True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(parameter, "http", "$$", True)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While InStr(parameter, vbLf) > 0`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox "vbLf"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "http", vbLf, True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(parameter, "http", vbLf, True)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Wend`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While InStr(parameter, vbCr) > 0`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox "vbCr"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd)`(parameter, "http", vbCr, True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(parameter, "http", vbCr, True)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Wend`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = ""`  
@@ -72,7 +72,7 @@
 `'    MsgBox cmdStr`  
 `'    Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox)` "please select video type? ", "mp4", "", "webm", 3`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox.md)` "please select video type? ", "mp4", "", "webm", 3`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If confirmation = "mp4" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cmdStr = cmdStr & " " & """" & "mp4" & """"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -85,7 +85,7 @@
 `'    Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim pyResult As GlobalConfig.results`  
-&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult)`(cmdStr, "C:\BAK\cmd.log", False, False, currentRow)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult.md)`(cmdStr, "C:\BAK\cmd.log", False, False, currentRow)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MyMsgBox pyResultStr, 15`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MyMsgBox ReadLineByFile("C:\BAK\cmd.log"), 15`  
@@ -98,27 +98,27 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim jsonStr As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' jsonStr = Cells(pyResult.rowNum, 18)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`jsonStr = pyResult.resultStr`  
-&nbsp;&nbsp;&nbsp;&nbsp;`jsonStr = `[`CutStrByStartEnd`](CutStrByStartEnd)`(jsonStr, "{", "$$", True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`jsonStr = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(jsonStr, "{", "$$", True)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim Json As Object`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set Json = JsonConverter.ParseJson(jsonStr)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim cmdResult As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim subtitles As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`subtitles = `[`Json`](Json)`("subtitles")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`subtitles = `[`Json`](Json.md)`("subtitles")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`titleText = Replace(Replace(Json("titleText"), "<<", "{"), ">>", "}")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`videoFileName = Replace(Replace(Json("videoFileName"), "<<", "{"), ">>", "}")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(pyResult.rowNum, 1) = subtitles`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 2) = `[`Json`](Json)`("filesizeString")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 3) = `[`Json`](Json)`("view_count")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 4) = "'" & `[`Json`](Json)`("upload_date")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 2) = `[`Json`](Json.md)`("filesizeString")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 3) = `[`Json`](Json.md)`("view_count")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 4) = "'" & `[`Json`](Json.md)`("upload_date")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Cells(currentRow, 6) = titleText`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim rplTitleText As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`rplTitleText = " -metadata title=""" & titleText & """" & " -metadata album="`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim rplFormatCode As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`rplFormatCode = " " & `[`Json`](Json)`("formatCode") & " "`  
+&nbsp;&nbsp;&nbsp;&nbsp;`rplFormatCode = " " & `[`Json`](Json.md)`("formatCode") & " "`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Not (subtitles = "subtitles0[]" Or subtitles = "subtitles0" Or subtitles = "subtitlesErr" Or subtitles = "subtitlesNil") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`rplFormatCode = rplFormatCode & "--write-sub --sub-lang en,en-US,en-GB,zh,zh-CN,zh-HK,zh-TW,zh-Hans,zh-Hant --convert-subs srt "`  
@@ -147,8 +147,8 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(pyResult.rowNum, 13) = "'" & videoFileName`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 17) = "'" & `[`Json`](Json)`("vid")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 19) = "'" & `[`Json`](Json)`("quality")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 17) = "'" & `[`Json`](Json.md)`("vid")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' Cells(pyResult.rowNum, 19) = "'" & `[`Json`](Json.md)`("quality")`  
 `End Sub`  
 
 

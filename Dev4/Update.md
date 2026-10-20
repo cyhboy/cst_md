@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox "Your message!", vbSystemModal`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`AutoCloseMsgBox`](AutoCloseMsgBox)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`AutoCloseMsgBox`](AutoCloseMsgBox.md)  
 `End Sub`  
 
 

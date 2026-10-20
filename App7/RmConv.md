@@ -43,23 +43,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox Join(NewArray, "|")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileList As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList)`(localFolder & wildChar)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList.md)`(localFolder & wildChar)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim myFile As Variant`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`path = "C:\AppFiles\cmdutils\Recycle.exe -f "`  
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each myFile In fileList`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`IsInArray`](IsInArray)`(CStr(myFile), NewArray) Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`IsInArray`](IsInArray.md)`(CStr(myFile), NewArray) Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = """" & localFolder & CStr(myFile) & """"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun)` path & parameter, False`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun.md)` path & parameter, False`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Next myFile`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 20`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 20`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `End Sub`  
 

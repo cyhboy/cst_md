@@ -7,9 +7,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim pass As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`pass = `[`GenPass`](GenPass)`()`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If 1 = 2 And True = `[`IsHistPass`](IsHistPass)`(pass) Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Pass2G`](Pass2G)  
+&nbsp;&nbsp;&nbsp;&nbsp;`pass = `[`GenPass`](GenPass.md)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If 1 = 2 And True = `[`IsHistPass`](IsHistPass.md)`(pass) Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Pass2G`](Pass2G.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 7) = pass`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  

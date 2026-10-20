@@ -3,7 +3,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF.md)  
 `'    SltX 17`  
 `'    Dim myArr As Variant`  
 `'    myArr = RangeToArray()`  
@@ -20,7 +20,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox (Join(garr, "|"))`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Filt 17, Join(garr, "|")`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`Filt`](Filt)` 17, filtStr`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`Filt`](Filt.md)` 17, filtStr`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ActiveWorkbook.Save`  
 `End Sub`  
 

@@ -31,7 +31,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Function`  
 `Catch:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`URLDecode2 = ""`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`Resume`](Resume)` Finally`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`Resume`](Resume.md)` Finally`  
 `End Function`  
 
 

@@ -15,7 +15,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`curCell.Select`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox subName`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun)` "ChkVF"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun.md)` "ChkVF"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Next curCell`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
@@ -43,9 +43,9 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim ffResult1 As GlobalConfig.results`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim ffResult2 As GlobalConfig.results`  
-&nbsp;&nbsp;&nbsp;&nbsp;`'ffResultStr = `[`ShellRunResult`](ShellRunResult)`(cmdStr1 & " && " & cmdStr2, "C:\BAK\cmd.log", True, True)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`ffResult1 = `[`ShellRunResult`](ShellRunResult)`(cmdStr1, "C:\BAK\cmd.log", False, False, currentRow)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`ffResult2 = `[`ShellRunResult`](ShellRunResult)`(cmdStr2, "C:\BAK\cmd.log", False, True, currentRow)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`'ffResultStr = `[`ShellRunResult`](ShellRunResult.md)`(cmdStr1 & " && " & cmdStr2, "C:\BAK\cmd.log", True, True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`ffResult1 = `[`ShellRunResult`](ShellRunResult.md)`(cmdStr1, "C:\BAK\cmd.log", False, False, currentRow)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`ffResult2 = `[`ShellRunResult`](ShellRunResult.md)`(cmdStr2, "C:\BAK\cmd.log", False, True, currentRow)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(ffResult2.rowNum, 20) = "'" & ffResult2.resultStr`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `End Sub`  

@@ -6,7 +6,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`path = "code.cmd"`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`FileEditParam`](FileEditParam)` False, True, path`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`FileEditParam`](FileEditParam.md)` False, True, path`  
 `End Sub`  
 
 

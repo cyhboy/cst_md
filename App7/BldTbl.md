@@ -22,10 +22,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`sql1 = "drop table " & tblname`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim filePath As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`FnLstFil`](FnLstFil)`("C:\BAK\" & ActiveSheet.Name & "_*.txt")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`FnLstFil`](FnLstFil.md)`("C:\BAK\" & ActiveSheet.Name & "_*.txt")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim firstLine As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`firstLine = `[`FnGetFileLine`](FnGetFileLine)`(filePath, 1)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`firstLine = `[`FnGetFileLine`](FnGetFileLine.md)`(filePath, 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`firstLine = Left(firstLine, Len(firstLine) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`firstLine = Right(firstLine, Len(firstLine) - 1)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  

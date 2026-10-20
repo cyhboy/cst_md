@@ -18,7 +18,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`curCell.Select`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox subName`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun)` "DelFs"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun.md)` "DelFs"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Next curCell`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`GlobalConfig.silentMode = False`  
@@ -26,7 +26,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If GlobalConfig.silentMode = False Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox)` "delete file in row? ", "No", "Yes", "", 10`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox.md)` "delete file in row? ", "No", "Yes", "", 10`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If GlobalConfig.confirmation = "No" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -44,15 +44,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 21) = "'" & Cells(currentRow, 21) & Cells(currentRow, 20)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 9) & Cells(currentRow, 11)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox `[`FileExists`](FileExists)`(parameter)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox `[`FolderExists`](FolderExists)`(parameter)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox `[`FileExists`](FileExists.md)`(parameter)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox `[`FolderExists`](FolderExists.md)`(parameter)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`FileExists`](FileExists)`(parameter) Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`FileExists`](FileExists.md)`(parameter) Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`FolderExists`](FolderExists)`(parameter) Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`FolderExists`](FolderExists.md)`(parameter) Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -60,7 +60,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim pyResult As GlobalConfig.results`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' ShellRun path & parameter, False`  
-&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult)`(path & parameter, "C:\BAK\cmd.log", True, False, currentRow)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`pyResult = `[`ShellRunResult`](ShellRunResult.md)`(path & parameter, "C:\BAK\cmd.log", True, False, currentRow)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(pyResult.rowNum, 20) = "'" & Cells(pyResult.rowNum, 20) & pyResult.resultStr`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  

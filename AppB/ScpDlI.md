@@ -4,9 +4,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ScpDlParam`](ScpDlParam)` True`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`XftpI`](XftpI)  
-&nbsp;&nbsp;&nbsp;&nbsp;`If "On" = `[`ReadRegAR`](ReadRegAR)`() Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ScpDlParam`](ScpDlParam.md)` True`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`XftpI`](XftpI.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;`If "On" = `[`ReadRegAR`](ReadRegAR.md)`() Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim exer As String`  

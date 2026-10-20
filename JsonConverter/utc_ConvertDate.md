@@ -34,7 +34,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_DateParts = Split(utc_Parts(0), "-")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_TimeParts = Split(utc_Parts(1), ":")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_ConvertDate = `[`DateSerial`](DateSerial)`(utc_DateParts(0), utc_DateParts(1), utc_DateParts(2)) + _`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_ConvertDate = `[`DateSerial`](DateSerial.md)`(utc_DateParts(0), utc_DateParts(1), utc_DateParts(2)) + _`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`TimeSerial(utc_TimeParts(0), utc_TimeParts(1), utc_TimeParts(2))`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `End Function`  

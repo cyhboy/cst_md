@@ -6,13 +6,13 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`On Error GoTo ErrorHandler`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Fold`](Fold)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Fold`](Fold.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`path = `[`GetAppDrive`](GetAppDrive)`() & "\WinSCP\WinSCP.exe "`  
+&nbsp;&nbsp;&nbsp;&nbsp;`path = `[`GetAppDrive`](GetAppDrive.md)`() & "\WinSCP\WinSCP.exe "`  
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fqdn As String`  
@@ -40,7 +40,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkPath As String: ppkPath = ""`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFile As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ppkFile = Cells(currentRow, 14)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(ppkFile, ".ppk") Or ppkFile = "private_key" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(ppkFile, ".ppk") Or ppkFile = "private_key" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFolder As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkFolder = Replace(Cells(currentRow, 13), ActiveWorkbook.Name, "")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkPath = ppkFolder & ppkFile`  
@@ -59,7 +59,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim localFolder As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Cells(currentRow, 9)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(localFolder, "\") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(localFolder, "\") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Left(localFolder, Len(localFolder) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -67,7 +67,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'uid = Environ$("username")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim propsMap As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set propsMap = `[`ReadPropertyInAppFiles`](ReadPropertyInAppFiles)`("identity.ini")`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set propsMap = `[`ReadPropertyInAppFiles`](ReadPropertyInAppFiles.md)`("identity.ini")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`pass = propsMap("AD_PASSWORD")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -78,22 +78,22 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`parameter = "sftp://" & uid & ":" & pass & "@" & fqdn & ":" & port & fileOrFolder`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If `[`URLEncode`](URLEncode)`(localFolder) <> ReadIniFileString("Configuration\Interface\Commander\LocalPanel", "LastPath") Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`URLEncode`](URLEncode)`(localFolder)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If `[`URLEncode`](URLEncode.md)`(localFolder) <> ReadIniFileString("Configuration\Interface\Commander\LocalPanel", "LastPath") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`URLEncode`](URLEncode.md)`(localFolder)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox ReadIniFileString("Configuration\Interface\Commander\LocalPanel", "LastPath")`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`WriteIniFileString`](WriteIniFileString)`("Configuration\Interface\Commander\LocalPanel", "LastPath", `[`URLEncode`](URLEncode)`(localFolder))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`WriteIniFileString`](WriteIniFileString.md)`("Configuration\Interface\Commander\LocalPanel", "LastPath", `[`URLEncode`](URLEncode.md)`(localFolder))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim write_result As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`write_result = `[`WriteIniFileString`](WriteIniFileString)`("Configuration\Interface\Commander\LocalPanel", "LastPath", `[`URLEncode`](URLEncode)`(localFolder))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`write_result = `[`WriteIniFileString`](WriteIniFileString.md)`("Configuration\Interface\Commander\LocalPanel", "LastPath", `[`URLEncode`](URLEncode.md)`(localFolder))`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox path & parameter`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRunMax`](ShellRunMax)` path & parameter`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRunMax`](ShellRunMax.md)` path & parameter`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'    If Hold Then`  

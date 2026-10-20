@@ -6,8 +6,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ScpDlParam`](ScpDlParam)` True`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Xftp`](Xftp)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ScpDlParam`](ScpDlParam.md)` True`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Xftp`](Xftp.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `'    If "On" = ReadRegAR() Then`  
 `'        Dim exer As String`  

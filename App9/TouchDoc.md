@@ -41,7 +41,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Set wa = Nothing`  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 10`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 10`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `End Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  

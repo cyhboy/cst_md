@@ -16,7 +16,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`videoFullFilename = videoPath & videoFileName`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 7) = `[`GetVideoDuration`](GetVideoDuration)`(videoFullFilename)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 7) = `[`GetVideoDuration`](GetVideoDuration.md)`(videoFullFilename)`  
 `End Sub`  
 
 

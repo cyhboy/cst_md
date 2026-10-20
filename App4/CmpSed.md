@@ -75,15 +75,15 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`path = """" & `[`GetAppDrive`](GetAppDrive)`() & "\Beyond Compare 3\BCompare.exe" & """"`  
-&nbsp;&nbsp;&nbsp;&nbsp;`parameter = " " & """" & `[`SeedFileGet`](SeedFileGet)`(fileName2) & """" & " " & """" & fileName1 & """"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`path = """" & `[`GetAppDrive`](GetAppDrive.md)`() & "\Beyond Compare 3\BCompare.exe" & """"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`parameter = " " & """" & `[`SeedFileGet`](SeedFileGet.md)`(fileName2) & """" & " " & """" & fileName1 & """"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun)` path & parameter, False`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun.md)` path & parameter, False`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Not unholding Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim exeName As String: exeName = `[`ExtractEXE`](ExtractEXE)`(path)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim exeName As String: exeName = `[`ExtractEXE`](ExtractEXE.md)`(path)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox exeName`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While True = `[`IsExeRunning`](IsExeRunning)`(exeName)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`While True = `[`IsExeRunning`](IsExeRunning.md)`(exeName)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Sleep 3000`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Wend`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  

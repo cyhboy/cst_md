@@ -18,10 +18,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim filePath As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`FnLstFil`](FnLstFil)`("C:\BAK\" & ActiveSheet.Name & "_*.txt")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`FnLstFil`](FnLstFil.md)`("C:\BAK\" & ActiveSheet.Name & "_*.txt")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim firstLine As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`firstLine = `[`FnGetFileLine`](FnGetFileLine)`(filePath, 1)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`firstLine = `[`FnGetFileLine`](FnGetFileLine.md)`(filePath, 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`firstLine = Left(firstLine, Len(firstLine) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`firstLine = Right(firstLine, Len(firstLine) - 1)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -167,7 +167,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`rst.Close`  
 &nbsp;&nbsp;&nbsp;&nbsp;`db.Close`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` "Done Import", 5`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` "Done Import", 5`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'    If Err.Number <> 0 Then`  

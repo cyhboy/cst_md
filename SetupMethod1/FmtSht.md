@@ -9,7 +9,7 @@
 `'    End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If ActiveWorkbook.ActiveSheet.Name = "Info" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox)` "format info sheet or not? ", "No", "Yes", "", 5`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyQuestionBox`](MyQuestionBox.md)` "format info sheet or not? ", "No", "Yes", "", 5`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If confirmation = "No" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ActiveWorkbook.Sheets("Sheet1").Activate`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -17,18 +17,18 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Call PDPH`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If ActiveWorkbook.Name = "cst_template.xlsm" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`RstDt`](RstDt)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`RstDt`](RstDt.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'Exit Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CreTitl`](CreTitl)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CreTitl`](CreTitl.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`Range("A2").Select`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FitScr`](FitScr)  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Sample`](Sample)  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`DrawTbl`](DrawTbl)  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Frz`](Frz)  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`RstCf`](RstCf)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FitScr`](FitScr.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Sample`](Sample.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`DrawTbl`](DrawTbl.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Frz`](Frz.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`RstCf`](RstCf.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Call SavAll`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `End Sub`  

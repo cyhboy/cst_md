@@ -5,10 +5,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`On Error GoTo ErrorHandler`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Application.ScreenUpdating = False`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CleanRgn`](CleanRgn)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CleanRgn`](CleanRgn.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim filePath As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`FnLstFil`](FnLstFil)`("C:\BAK\*.csv")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`FnLstFil`](FnLstFil.md)`("C:\BAK\*.csv")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim ff As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ff = FreeFile()`  
@@ -33,7 +33,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`For colNo = 0 To UBound(lineItems)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cllVal = lineItems(colNo)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`StartsWith`](StartsWith)`(cllVal, "'") And True = EndsWith(cllVal, "'") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`StartsWith`](StartsWith.md)`(cllVal, "'") And True = EndsWith(cllVal, "'") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cllVal = Left(cllVal, Len(cllVal) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cllVal = Right(cllVal, Len(cllVal) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -50,7 +50,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Application.ScreenUpdating = True`  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `End Sub`  
 

@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`FtpParam`](FtpParam)` False`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`FtpParam`](FtpParam.md)` False`  
 `End Sub`  
 
 

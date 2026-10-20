@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Update`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Application.OnTime Now + `[`TimeValue`](TimeValue)`("0:00:01"), "NonBlockingChange"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Application.OnTime Now + `[`TimeValue`](TimeValue.md)`("0:00:01"), "NonBlockingChange"`  
 `End Sub`  
 
 

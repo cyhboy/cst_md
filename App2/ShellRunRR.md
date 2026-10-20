@@ -21,9 +21,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`'Shell path, vbNormalFocus`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'Shell path, vbHide`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`Redirect`](Redirect)`("cmd", "/c dir")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox `[`Redirect`](Redirect.md)`("cmd", "/c dir")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`ShellRunRR = `[`Redirect`](Redirect)`(path, param)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`ShellRunRR = `[`Redirect`](Redirect.md)`(path, param)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `End Function`  
 

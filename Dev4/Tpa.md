@@ -6,16 +6,16 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If coding Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim mcode As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`mcode = `[`Proc2FilFun`](Proc2FilFun)`("Tpa")`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`mcode = `[`Proc2FilFun`](Proc2FilFun.md)`("Tpa")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MsgBox mcode`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`OBO`](OBO)` 3`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`OBO`](OBO.md)` 3`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`Cntif`](Cntif)` 23, 9`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`Cntif`](Cntif.md)` 23, 9`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `'    Call FiltW`  
 `'    SltX 9`  
@@ -24,10 +24,10 @@
 `'    silentMode = False`  
 `'    Call UnHF`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FiltF`](FiltF)  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FiltQ`](FiltQ)  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FiltM`](FiltM)  
-&nbsp;&nbsp;&nbsp;&nbsp;[`TopVisible`](TopVisible)` 3, 0.5, 10`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FiltF`](FiltF.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FiltQ`](FiltQ.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`FiltM`](FiltM.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TopVisible`](TopVisible.md)` 3, 0.5, 10`  
 `End Sub`  
 
 

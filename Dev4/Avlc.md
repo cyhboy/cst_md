@@ -9,10 +9,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim arrStr As String`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim arrAll As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`arrAll = `[`EmptyStringArray`](EmptyStringArray)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`arrAll = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim arrPsiphon As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`arrPsiphon = `[`EmptyStringArray`](EmptyStringArray)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`arrPsiphon = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim arr As Variant`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim astr As Variant`  
@@ -21,23 +21,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`offsetCount = 0`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim psiphon_common_list As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`EmptyStringArray`](EmptyStringArray)`()`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "SG")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "JP")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "GB")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "US")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "PL")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "NL")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "CA")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "AU")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "DE")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray)`(psiphon_common_list, "FI")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "SG")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "JP")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "GB")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "US")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "PL")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "NL")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "CA")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "AU")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "DE")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`psiphon_common_list = `[`AddToArray`](AddToArray.md)`(psiphon_common_list, "FI")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`SltX`](SltX)` 18`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`SltX`](SltX.md)` 18`  
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each curCell In Selection`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'Set curCell = curRng(i, 0)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrStr = `[`CutStrByStartEnd`](CutStrByStartEnd)`(curCell.Value, "[", "]", True, True)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrStr = `[`CutStrByStartEnd`](CutStrByStartEnd.md)`(curCell.Value, "[", "]", True, True)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrStr = Replace(arrStr, "[", "")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrStr = Replace(arrStr, "]", "")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrStr = Replace(arrStr, "'", "")`  
@@ -46,10 +46,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arr = Split(arrStr, ",")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`For Each astr In arr`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrAll = `[`AddToArray`](AddToArray)`(arrAll, CStr(astr))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrAll = `[`AddToArray`](AddToArray.md)`(arrAll, CStr(astr))`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`IsInArray`](IsInArray)`(CStr(astr), psiphon_common_list) Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrPsiphon = `[`AddToArray`](AddToArray)`(arrPsiphon, CStr(astr))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`IsInArray`](IsInArray.md)`(CStr(astr), psiphon_common_list) Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`arrPsiphon = `[`AddToArray`](AddToArray.md)`(arrPsiphon, CStr(astr))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox astr`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
@@ -92,7 +92,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim maxCountAll As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`maxCountAll = 0`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim countryListAll As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`countryListAll = `[`EmptyStringArray`](EmptyStringArray)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`countryListAll = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each xx In dictAll.Keys`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If CInt(dictAll.Item(xx)) > maxCountAll Then`  
@@ -102,14 +102,14 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each yy In dictAll.Keys`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If dictAll.Item(yy) = maxCountAll Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`countryListAll = `[`AddToArray`](AddToArray)`(countryListAll, CStr(yy))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`countryListAll = `[`AddToArray`](AddToArray.md)`(countryListAll, CStr(yy))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Next yy`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim maxCountPsiphon As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`maxCountPsiphon = 0`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim countryListPsiphon As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`countryListPsiphon = `[`EmptyStringArray`](EmptyStringArray)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`countryListPsiphon = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each xx In dictPsiphon.Keys`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If CInt(dictPsiphon.Item(xx)) > maxCountPsiphon Then`  
@@ -119,12 +119,12 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each yy In dictPsiphon.Keys`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If dictPsiphon.Item(yy) = maxCountPsiphon Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`countryListPsiphon = `[`AddToArray`](AddToArray)`(countryListPsiphon, CStr(yy))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`countryListPsiphon = `[`AddToArray`](AddToArray.md)`(countryListPsiphon, CStr(yy))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Next yy`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`countryListAll = `[`AddToArray`](AddToArray)`(countryListAll, CStr(maxCountAll + offsetCount))`  
-&nbsp;&nbsp;&nbsp;&nbsp;`countryListPsiphon = `[`AddToArray`](AddToArray)`(countryListPsiphon, CStr(maxCountPsiphon + offsetCount))`  
+&nbsp;&nbsp;&nbsp;&nbsp;`countryListAll = `[`AddToArray`](AddToArray.md)`(countryListAll, CStr(maxCountAll + offsetCount))`  
+&nbsp;&nbsp;&nbsp;&nbsp;`countryListPsiphon = `[`AddToArray`](AddToArray.md)`(countryListPsiphon, CStr(maxCountPsiphon + offsetCount))`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set dictAll = Nothing`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set dictPsiphon = Nothing`  

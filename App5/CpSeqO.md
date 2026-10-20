@@ -33,11 +33,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Range("H" & countNew).Activate`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 15) = "'" & `[`LPad`](LPad)`(Cells(currentRow - 1, 15) + 1, 4, "0")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 15) = "'" & `[`LPad`](LPad.md)`(Cells(currentRow - 1, 15) + 1, 4, "0")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Application.ScreenUpdating = True`  

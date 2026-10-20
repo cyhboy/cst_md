@@ -18,7 +18,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`curCell.Select`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox subName`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun)` "Fold"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun.md)` "Fold"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Next curCell`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
@@ -33,18 +33,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
 &nbsp;&nbsp;&nbsp;&nbsp;`strDirectory = Cells(currentRow, 9)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`EndsWith`](EndsWith)`(strDirectory, "\") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`EndsWith`](EndsWith.md)`(strDirectory, "\") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`strDirectory = strDirectory & "\"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `'    Dim strDirectoryArr As Variant`  
-`'    If `[`EndsWith`](EndsWith)`(activeName, "_playlists.xlsm") Then`  
+`'    If `[`EndsWith`](EndsWith.md)`(activeName, "_playlists.xlsm") Then`  
 `'        strDirectoryArr = Split(strDirectory, "\")`  
 `'        strDirectory = Replace(strDirectory, strDirectoryArr(3), "")`  
 `'        strDirectory = Replace(strDirectory, "\\", "\")`  
 `'    End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`CreateFolder`](CreateFolder)` strDirectory`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`CreateFolder`](CreateFolder.md)` strDirectory`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Enhanced for youtube-dl`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim command As String`  
@@ -52,54 +52,54 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim cookie_time As Date`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(command, "youtube") > 0 And InStr(command, "yt-dlp") > 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cookie_time = `[`LastModDate`](LastModDate)`("C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt")`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff)`("s", cookie_time, Now()) > 300 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt") = "" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ExCookies`](ExCookies)` "https://www.youtube.com/"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cookie_time = `[`LastModDate`](LastModDate.md)`("C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt")`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff.md)`("s", cookie_time, Now()) > 300 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt") = "" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ExCookies`](ExCookies.md)` "https://www.youtube.com/"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` strDirectory & "youtube.com_cookies.txt"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt", strDirectory & "youtube.com_cookies.txt", True`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt", "D:\learning\" & "youtube.com_cookies.txt", True`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile.md)` strDirectory & "youtube.com_cookies.txt"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil.md)` "C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt", strDirectory & "youtube.com_cookies.txt", True`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil.md)` "C:\Users\" & Environ$("username") & "\Desktop\youtube.com_cookies.txt", "D:\learning\" & "youtube.com_cookies.txt", True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' CpFil2Fil "C:\Users\" & Environ$("username") & "\Downloads\www.youtube.com.txt", "D:\learning\" & "youtube.com_cookies.txt", True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' HideFile strDirectory & "youtube.com_cookies.txt"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` strDirectory & "compareE.bat"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile.md)` strDirectory & "compareE.bat"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If Dir(strDirectory & "compareE.bat") = "" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\" & Environ$("username") & "\Desktop\compareE.bat", strDirectory & "compareE.bat", True`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil.md)` "C:\Users\" & Environ$("username") & "\Desktop\compareE.bat", strDirectory & "compareE.bat", True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile)` strDirectory & "compareE.bat"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile.md)` strDirectory & "compareE.bat"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Wr2Cmd`](Wr2Cmd)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Wr2Cmd`](Wr2Cmd.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(command, "douyin") > 0 And InStr(command, "yt-dlp") > 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff)`("s", `[`LastModDate`](LastModDate)`("C:\Users\" & Environ$("username") & "\Desktop\douyin.com_cookies.txt"), Now()) > 1800 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\douyin.com_cookies.txt") = "" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ExCookies`](ExCookies)` "https://www.douyin.com/"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff.md)`("s", `[`LastModDate`](LastModDate.md)`("C:\Users\" & Environ$("username") & "\Desktop\douyin.com_cookies.txt"), Now()) > 1800 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\douyin.com_cookies.txt") = "" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ExCookies`](ExCookies.md)` "https://www.douyin.com/"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` strDirectory & "douyin.com_cookies.txt"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\" & Environ$("username") & "\Desktop\douyin.com_cookies.txt", strDirectory & "douyin.com_cookies.txt", True`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile.md)` strDirectory & "douyin.com_cookies.txt"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil.md)` "C:\Users\" & Environ$("username") & "\Desktop\douyin.com_cookies.txt", strDirectory & "douyin.com_cookies.txt", True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' CpFil2Fil "C:\Users\" & Environ$("username") & "\Desktop\douyin.com_cookies.json", strDirectory & "douyin.com_cookies.json", True, True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' HideFile strDirectory & "douyin.com_cookies.txt"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` strDirectory & "compareE.bat"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile.md)` strDirectory & "compareE.bat"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If Dir(strDirectory & "compareE.bat") = "" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\" & Environ$("username") & "\Desktop\compareE.bat", strDirectory & "compareE.bat", True`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil.md)` "C:\Users\" & Environ$("username") & "\Desktop\compareE.bat", strDirectory & "compareE.bat", True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile)` strDirectory & "compareE.bat"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Wr2Cmd`](Wr2Cmd)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile.md)` strDirectory & "compareE.bat"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Wr2Cmd`](Wr2Cmd.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If InStr(command, "bilibili") > 0 And InStr(command, "yt-dlp") > 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff)`("s", `[`LastModDate`](LastModDate)`("C:\Users\" & Environ$("username") & "\Desktop\bilibili.com_cookies.txt"), Now()) > 1800 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\bilibili.com_cookies.txt") = "" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ExCookies`](ExCookies)` "https://www.bilibili.com/"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff.md)`("s", `[`LastModDate`](LastModDate.md)`("C:\Users\" & Environ$("username") & "\Desktop\bilibili.com_cookies.txt"), Now()) > 1800 Or Dir("C:\Users\" & Environ$("username") & "\Desktop\bilibili.com_cookies.txt") = "" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`ExCookies`](ExCookies.md)` "https://www.bilibili.com/"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` strDirectory & "bilibili.com_cookies.txt"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\" & Environ$("username") & "\Desktop\bilibili.com_cookies.txt", strDirectory & "bilibili.com_cookies.txt", True`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile.md)` strDirectory & "bilibili.com_cookies.txt"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil.md)` "C:\Users\" & Environ$("username") & "\Desktop\bilibili.com_cookies.txt", strDirectory & "bilibili.com_cookies.txt", True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' HideFile strDirectory & "bilibili.com_cookies.txt"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile)` strDirectory & "compareE.bat"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`FileExists`](FileExists)`(strDirectory & "compareE.bat") Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil)` "C:\Users\" & Environ$("username") & "\Desktop\compareE.bat", strDirectory & "compareE.bat", True`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhideFile`](UnhideFile.md)` strDirectory & "compareE.bat"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If False = `[`FileExists`](FileExists.md)`(strDirectory & "compareE.bat") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CpFil2Fil`](CpFil2Fil.md)` "C:\Users\" & Environ$("username") & "\Desktop\compareE.bat", strDirectory & "compareE.bat", True`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile)` strDirectory & "compareE.bat"`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Wr2Cmd`](Wr2Cmd)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`HideFile`](HideFile.md)` strDirectory & "compareE.bat"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Wr2Cmd`](Wr2Cmd.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'    Dim cell As Object`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'    For Each cell In Selection.Cells`  
@@ -114,7 +114,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox "Create standard folder successfully"`  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Application.ScreenUpdating = True`  

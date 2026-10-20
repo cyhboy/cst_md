@@ -5,7 +5,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Call FVC`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`SltX`](SltX)` 9`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`SltX`](SltX.md)` 9`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' TopVisible 3, 0.5, 10`  
 `'    MsgBox (TypeName("test1"))`  
 `'    MsgBox (TypeName(garr))`  

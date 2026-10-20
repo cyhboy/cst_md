@@ -15,7 +15,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Not silentMode Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` filePath1 & " to " & filePath2 & " copied", 5`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` filePath1 & " to " & filePath2 & " copied", 5`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `'ErrorHandler:`  
 `'    If Err.Number <> 0 Then`  

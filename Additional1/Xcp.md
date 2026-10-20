@@ -11,7 +11,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`sourceFolder = Cells(currentRow, 9)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`destFolder = Cells(currentRow + 1, 9)`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`XcopyFolder`](XcopyFolder)` sourceFolder, destFolder`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`XcopyFolder`](XcopyFolder.md)` sourceFolder, destFolder`  
 `End Sub`  
 
 

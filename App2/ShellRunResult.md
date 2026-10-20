@@ -8,7 +8,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`cmdLogFile = Replace(logFile, ".log", "_" & LPad(Trim(str(inputRow)), 6, "0") & ".log")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox cmdLogFile`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`TchFil`](TchFil)` cmdLogFile, Not APPEND`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`TchFil`](TchFil.md)` cmdLogFile, Not APPEND`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -69,7 +69,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim results As GlobalConfig.results`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`With results`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.resultStr = `[`ReadLineByFileUTF8`](ReadLineByFileUTF8)`(cmdLogFile)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.resultStr = `[`ReadLineByFileUTF8`](ReadLineByFileUTF8.md)`(cmdLogFile)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.rowNum = inputRow`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End With`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  

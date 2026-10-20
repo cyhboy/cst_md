@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Sheets("Sheet1").Select`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`DoNothing`](DoNothing)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`DoNothing`](DoNothing.md)  
 `End Sub`  
 
 

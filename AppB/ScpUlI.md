@@ -3,8 +3,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ScpUlParam`](ScpUlParam)` True`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`XftpI`](XftpI)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ScpUlParam`](ScpUlParam.md)` True`  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`XftpI`](XftpI.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `'    If "On" = ReadRegAR() Then`  
 `'        Dim currentRow As Integer`  

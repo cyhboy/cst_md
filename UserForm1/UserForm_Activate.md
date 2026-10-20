@@ -2,8 +2,8 @@
 `Private Sub UserForm_Activate()`  
 &nbsp;&nbsp;&nbsp;&nbsp;`On Error Resume Next`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Me.Repaint`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`AppActivate`](AppActivate)` Application.Caption`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`AppActivate`](AppActivate)` Me.Caption`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`AppActivate`](AppActivate.md)` Application.Caption`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`AppActivate`](AppActivate.md)` Me.Caption`  
 `End Sub`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `'Private Sub UserForm_Initialize()`  

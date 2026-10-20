@@ -7,7 +7,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim tFormPos As RECT, tMsgBoxPos As RECT, tScreenWorkArea As RECT`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim lLeft As Long, lTop As Long`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`Static`](Static)` sbRecursive As Boolean`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`Static`](Static.md)` sbRecursive As Boolean`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If lMsg = HCBT_ACTIVATE Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`On Error Resume Next`  
@@ -15,8 +15,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`tScreenWorkArea = ScreenWorkArea`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'Get the coordinates of the form and the message box so that`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'you can determine where the center of the form is located`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`GetWindowRect`](GetWindowRect)` GetForegroundWindow, tFormPos`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`GetWindowRect`](GetWindowRect)` wParam, tMsgBoxPos`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`GetWindowRect`](GetWindowRect.md)` GetForegroundWindow, tFormPos`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`GetWindowRect`](GetWindowRect.md)` wParam, tMsgBoxPos`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Select Case zePosition`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Case eCentreDialog`  
@@ -63,10 +63,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Position the msgbox`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`SetWindowPos`](SetWindowPos)` wParam, 0, lLeft, lTop, 10, 10, SWP_NOSIZE Or SWP_NOZORDER Or SWP_NOACTIVATE`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`SetWindowPos`](SetWindowPos.md)` wParam, 0, lLeft, lTop, 10, 10, SWP_NOSIZE Or SWP_NOZORDER Or SWP_NOACTIVATE`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Release the CBT hook`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhookWindowsHookEx`](UnhookWindowsHookEx)` zlhHook`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`UnhookWindowsHookEx`](UnhookWindowsHookEx.md)` zlhHook`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`zWindowProc = False`  
 `End Function`  

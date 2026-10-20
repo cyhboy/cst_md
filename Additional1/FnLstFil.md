@@ -5,7 +5,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim filePath As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileList As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList)`(fileSpec)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList.md)`(fileSpec)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim localFolder As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Left(fileSpec, InStrRev(fileSpec, "\"))`  

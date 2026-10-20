@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`XftpParam`](XftpParam)` True`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`XftpParam`](XftpParam.md)` True`  
 `End Sub`  
 
 

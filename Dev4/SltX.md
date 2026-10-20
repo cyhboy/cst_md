@@ -5,7 +5,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`'ActiveSheet.Cells(1, colNum).Select`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`FVC`](FVC)` colNum`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`FVC`](FVC.md)` colNum`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim rng As Variant`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim visibleCnt As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set rng = ActiveSheet.AutoFilter.Range`  

@@ -75,10 +75,10 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`path = """" & `[`GetAppDrive`](GetAppDrive)`() & "\Beyond Compare 3\BCompare.exe" & """"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`path = """" & `[`GetAppDrive`](GetAppDrive.md)`() & "\Beyond Compare 3\BCompare.exe" & """"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = " " & """" & fileName2 & """" & " " & """" & fileName1 & """"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun)` path & parameter, False`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun.md)` path & parameter, False`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `End Sub`  
 

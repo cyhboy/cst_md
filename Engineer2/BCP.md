@@ -23,7 +23,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim becallerList As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`For i = 0 To UBound(procNamesArr)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox procNamesArr(i)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`becallerList = `[`BeCallerP`](BeCallerP)`(procNamesArr(i))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`becallerList = `[`BeCallerP`](BeCallerP.md)`(procNamesArr(i))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If becallerList <> "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`becallerListAll = becallerListAll & Chr(13) & Chr(10) & becallerList`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
@@ -49,7 +49,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim becallerListArr As Variant`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`becallerListArr = Split(becallerListAll, "->")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`becallerListArr = `[`DeDupeArray`](DeDupeArray)`(becallerListArr)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`becallerListArr = `[`DeDupeArray`](DeDupeArray.md)`(becallerListArr)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 13) = Join(becallerListArr, ",") & ",Test"`  
 `End Sub`  

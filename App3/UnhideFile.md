@@ -8,7 +8,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox Dir(filePath, vbHidden)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Dir(filePath, vbHidden) <> "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Change the file attribute to normal`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`SetAttr`](SetAttr)` filePath, vbNormal`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`SetAttr`](SetAttr.md)` filePath, vbNormal`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox "done"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  

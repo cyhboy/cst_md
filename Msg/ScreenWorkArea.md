@@ -13,7 +13,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim lRet As Long`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Const SPI_GETWORKAREA = 48`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`lRet = `[`SystemParametersInfo`](SystemParametersInfo)`(SPI_GETWORKAREA, vbNull, tScreen, 0)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`lRet = `[`SystemParametersInfo`](SystemParametersInfo.md)`(SPI_GETWORKAREA, vbNull, tScreen, 0)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ScreenWorkArea = tScreen`  
 `End Function`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  

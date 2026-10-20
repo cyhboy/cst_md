@@ -25,7 +25,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`'Keep script waiting until Compressing is done`  
 &nbsp;&nbsp;&nbsp;&nbsp;`On Error Resume Next`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Do Until zipfolder.Items.count = 1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Application.Wait (Now + `[`TimeValue`](TimeValue)`("0:00:01"))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Application.Wait (Now + `[`TimeValue`](TimeValue.md)`("0:00:01"))`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Loop`  
 &nbsp;&nbsp;&nbsp;&nbsp;`On Error GoTo 0`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'Delete the temporary xls file`  

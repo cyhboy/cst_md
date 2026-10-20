@@ -30,7 +30,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`fso.CreateFolder targetSub`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CopyFolderContents`](CopyFolderContents)` fso, subFolder.path & "\", targetSub`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`CopyFolderContents`](CopyFolderContents.md)` fso, subFolder.path & "\", targetSub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Next subFolder`  
 `End Sub`  
 

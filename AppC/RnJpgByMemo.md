@@ -12,7 +12,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim sourceFile As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim targetFile As String`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`sourceFile = `[`GetLstFilenameByKw`](GetLstFilenameByKw)`("C:\BAK", ".jpg", 1)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`sourceFile = `[`GetLstFilenameByKw`](GetLstFilenameByKw.md)`("C:\BAK", ".jpg", 1)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fso As Object`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = CreateObject("Scripting.FileSystemObject")`  

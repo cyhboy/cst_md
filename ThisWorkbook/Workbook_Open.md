@@ -27,7 +27,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim finalMacroPath As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`finalMacroPath = ThisWorkbook.FullName`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`theDrive = `[`CommonGetTheDrive`](CommonGetTheDrive)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`theDrive = `[`CommonGetTheDrive`](CommonGetTheDrive.md)`()`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox theDrive`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'theUser = RespExtMail(Environ$("username"), "EXTERNAL_MAIL")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`theUser = Environ$("username")`  
@@ -75,7 +75,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`If (mFileDate - cFileDate > 0) Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` "Dear CST Users, Thanks for choosing common support toolkits for your daily work. You now was recommended to upgrade to a new CST version, Please free 1 min to close your office suites and double click " & theFolder & "\install.bat. Thanks very much in deep. ", 10`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` "Dear CST Users, Thanks for choosing common support toolkits for your daily work. You now was recommended to upgrade to a new CST version, Please free 1 min to close your office suites and double click " & theFolder & "\install.bat. Thanks very much in deep. ", 10`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'CpFil2Fil updateUiPath, finalUiPath, False`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'CpFil2Fil finalUiPath, updateUiPathVer, False`  
@@ -92,7 +92,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` "Dear CST Users, When you see this message, The initialization of Common Support Toolkits may encounter some abnormal, It would not affect your daily excel operation, Be patience and try to dump this screen to CST Support, Thanks much. " & Err.Number & " " & Err.Description, 15`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` "Dear CST Users, When you see this message, The initialization of Common Support Toolkits may encounter some abnormal, It would not affect your daily excel operation, Be patience and try to dump this screen to CST Support, Thanks much. " & Err.Number & " " & Err.Description, 15`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `End Sub`  

@@ -4,16 +4,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`UnHF`](UnHF.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Call Frz`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CleanRgn`](CleanRgn)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`CleanRgn`](CleanRgn.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`Application.ScreenUpdating = False`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' On Error GoTo ErrorHandler`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim moduleArr As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`moduleArr = `[`EmptyStringArray`](EmptyStringArray)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`moduleArr = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim flagArr As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;`flagArr = `[`EmptyStringArray`](EmptyStringArray)`()`  
+&nbsp;&nbsp;&nbsp;&nbsp;`flagArr = `[`EmptyStringArray`](EmptyStringArray.md)`()`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Dim VBAEditor As VBIDE.VBE`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' Dim objProject0 As VBIDE.VBProject`  
@@ -41,8 +41,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each objComponent In objProject.VBComponents`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Find the code module for the project.`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set objCode = objComponent.CodeModule`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`moduleArr = `[`AddToArray`](AddToArray)`(moduleArr, CStr(objCode))`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`flagArr = `[`AddToArray`](AddToArray)`(flagArr, False)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`moduleArr = `[`AddToArray`](AddToArray.md)`(moduleArr, CStr(objCode))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`flagArr = `[`AddToArray`](AddToArray.md)`(flagArr, False)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set objCode = Nothing`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Set objComponent = Nothing`  
@@ -55,7 +55,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Find the code module for the project.`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set objCode = objComponent.CodeModule`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' Scan through the code module, looking for procedures.`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`idx = `[`IndexOfArray`](IndexOfArray)`(CStr(objCode), moduleArr)`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`idx = `[`IndexOfArray`](IndexOfArray.md)`(CStr(objCode), moduleArr)`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox idx`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`iLine = 1`  
@@ -96,7 +96,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ActiveSheet.Cells(i, 14).FormulaR1C1 = "=RIGHT(CELL(""filename"", R1C1),LEN(CELL(""filename"", R1C1))-FIND(""]"",CELL(""filename"", R1C1)))"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ActiveSheet.Cells(i, 15) = "'" & `[`LPad`](LPad)`((i - 1) & "", 4, "0")`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ActiveSheet.Cells(i, 15) = "'" & `[`LPad`](LPad.md)`((i - 1) & "", 4, "0")`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`' ActiveSheet.Cells(i, 16) = "#Proc2Fil TagProc #Proc2Md"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -115,10 +115,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' Clean up and exit.`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set objProject = Nothing`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`Cntif`](Cntif)` 47, 2`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`Cntif`](Cntif.md)` 47, 2`  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Application.ScreenUpdating = True`  

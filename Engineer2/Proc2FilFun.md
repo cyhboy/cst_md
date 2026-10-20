@@ -41,9 +41,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`'fldr = "C:\SANDBOX\VB_SPACE\GIT_CST_PROJECT\" & Format(Now, "yyyyMMddHHmm") & "\" & module & "\"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`fldr = "C:\SANDBOX\VB_SPACE\GIT_CST_PROJECT\" & Format(Now, "yyyyMMdd") & "\" & module & "\"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`CreateFolder`](CreateFolder)` fldr`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`CreateFolder`](CreateFolder.md)` fldr`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`WriteTxt2Code`](WriteTxt2Code)` resultStr, fldr & subb & ".bas"`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`WriteTxt2Code`](WriteTxt2Code.md)` resultStr, fldr & subb & ".bas"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Proc2FilFun = resultStr`  
 `End Function`  
 

@@ -12,9 +12,9 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`path = """" & `[`GetAppDrive`](GetAppDrive)`() & "\EditPlus\editplus.exe"" "`  
+&nbsp;&nbsp;&nbsp;&nbsp;`path = """" & `[`GetAppDrive`](GetAppDrive.md)`() & "\EditPlus\editplus.exe"" "`  
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = "C:\SANDBOX\VB_SPACE\VBA_PROJECT\" & Format(Now, "yyyyMMdd") & "\" & module & "\" & subb & ".bas"`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun)` path & parameter, False`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun.md)` path & parameter, False`  
 `End Sub`  
 
 

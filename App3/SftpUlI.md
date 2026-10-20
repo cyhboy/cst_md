@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`SftpUlParam`](SftpUlParam)` False`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`SftpUlParam`](SftpUlParam.md)` False`  
 `End Sub`  
 
 

@@ -20,15 +20,15 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Do While utc_feof(utc_File) = 0`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_Chunk = VBA.Space$(50)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_Read = `[`CLng`](CLng)`(utc_fread(utc_Chunk, 1, Len(utc_Chunk) - 1, utc_File))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_Read = `[`CLng`](CLng.md)`(utc_fread(utc_Chunk, 1, Len(utc_Chunk) - 1, utc_File))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If utc_Read > 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_Chunk = VBA.Left$(utc_Chunk, `[`CLng`](CLng)`(utc_Read))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_Chunk = VBA.Left$(utc_Chunk, `[`CLng`](CLng.md)`(utc_Read))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`utc_ExecuteInShell.utc_Output = utc_ExecuteInShell.utc_Output & utc_Chunk`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Loop`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `utc_ErrorHandling:`  
-&nbsp;&nbsp;&nbsp;&nbsp;`utc_ExecuteInShell.utc_ExitCode = `[`CLng`](CLng)`(utc_pclose(utc_File))`  
+&nbsp;&nbsp;&nbsp;&nbsp;`utc_ExecuteInShell.utc_ExitCode = `[`CLng`](CLng.md)`(utc_pclose(utc_File))`  
 `End Function`  
 
 

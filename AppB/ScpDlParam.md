@@ -4,10 +4,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`On Error GoTo ErrorHandler`  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Fold`](Fold)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`Fold`](Fold.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim path As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`'path = "cmd.exe /C " & `[`GetAppDrive`](GetAppDrive)`() & "\WinSCP\WinSCP.com /script=WinSCP.txt"`  
-&nbsp;&nbsp;&nbsp;&nbsp;`path = "cmd.exe /C " & `[`GetAppDrive`](GetAppDrive)`() & "\WinSCP\WinSCP.com /command"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`'path = "cmd.exe /C " & `[`GetAppDrive`](GetAppDrive.md)`() & "\WinSCP\WinSCP.com /script=WinSCP.txt"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`path = "cmd.exe /C " & `[`GetAppDrive`](GetAppDrive.md)`() & "\WinSCP\WinSCP.com /command"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim parameter As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim currentRow As Integer`  
 &nbsp;&nbsp;&nbsp;&nbsp;`currentRow = ActiveCell.Row`  
@@ -42,7 +42,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkPath As String: ppkPath = ""`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFile As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ppkFile = Cells(currentRow, 14)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(ppkFile, ".ppk") Or ppkFile = "private_key" Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(ppkFile, ".ppk") Or ppkFile = "private_key" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim ppkFolder As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkFolder = Replace(Cells(currentRow, 13), ActiveWorkbook.Name, "")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ppkPath = ppkFolder & ppkFile`  
@@ -56,7 +56,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`If uid = "" And pass = "" Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`uid = Environ$("username")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim propsMap As Variant`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set propsMap = `[`ReadPropertyInAppFiles`](ReadPropertyInAppFiles)`("identity.ini")`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set propsMap = `[`ReadPropertyInAppFiles`](ReadPropertyInAppFiles.md)`("identity.ini")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`pass = propsMap("AD_PASSWORD")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'binary|ascii|automatic`  
@@ -85,13 +85,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`' Exit Sub`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim myresults As GlobalConfig.results`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`myresults = `[`ShellRunResult`](ShellRunResult)`(path & parameter, "C:\BAK\cmd.log", False, False, currentRow)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`myresults = `[`ShellRunResult`](ShellRunResult.md)`(path & parameter, "C:\BAK\cmd.log", False, False, currentRow)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Cells(myresults.rowNum, 20) = "'" & myresults.resultStr`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`' ShellRun path & parameter, False`  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` Err.Number & " " & Err.Description, 30`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` Err.Number & " " & Err.Description, 30`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 `'    If Hold Then`  
 `'        Dim exeName As String: exeName = ExtractEXE(path)`  

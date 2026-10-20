@@ -10,9 +10,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`bytes = str`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim l As Long`  
 &nbsp;&nbsp;&nbsp;&nbsp;`For l = 0 To UBound(bytes) - 1`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`UnicodeToByteArray = UnicodeToByteArray & "&H" & `[`Hex`](Hex)`(bytes(l)) & ","`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`UnicodeToByteArray = UnicodeToByteArray & "&H" & `[`Hex`](Hex.md)`(bytes(l)) & ","`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Next`  
-&nbsp;&nbsp;&nbsp;&nbsp;`UnicodeToByteArray = UnicodeToByteArray & "&H" & `[`Hex`](Hex)`(bytes(UBound(bytes)))`  
+&nbsp;&nbsp;&nbsp;&nbsp;`UnicodeToByteArray = UnicodeToByteArray & "&H" & `[`Hex`](Hex.md)`(bytes(UBound(bytes)))`  
 `End Function`  
 
 

@@ -7,7 +7,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Range("A1").Select`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Range(Selection, Selection.End(xlToRight)).Select`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`InsCnoSlt`](InsCnoSlt)  
+&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`InsCnoSlt`](InsCnoSlt.md)  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Selection.Font.Bold = True`  
 &nbsp;&nbsp;&nbsp;&nbsp;`With Selection.Interior`  

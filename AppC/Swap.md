@@ -21,7 +21,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`resultMsg = "Nothing was changed"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`GetAppDrive`](GetAppDrive)`() & "\FlashFXP\FlashFXP.ini"`  
+&nbsp;&nbsp;&nbsp;&nbsp;`filePath = `[`GetAppDrive`](GetAppDrive.md)`() & "\FlashFXP\FlashFXP.ini"`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`strSkipNo = "Options=1001000000000010011010011111111000000101111101111000"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`strSkipYes = "Options=1001000000000010011010011111111000000101111101111001"`  
@@ -57,7 +57,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Set fso = Nothing`  
-&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox)` resultMsg, 10`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`MyMsgBox`](MyMsgBox.md)` resultMsg, 10`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `ErrorHandler:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If Err.Number <> 0 Then`  

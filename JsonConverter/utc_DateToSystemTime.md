@@ -1,7 +1,7 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 `#Else`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-[`Private`](Private)` Function utc_DateToSystemTime(utc_Value As Date) As utc_SYSTEMTIME`  
+[`Private`](Private.md)` Function utc_DateToSystemTime(utc_Value As Date) As utc_SYSTEMTIME`  
 &nbsp;&nbsp;&nbsp;&nbsp;`If testing Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Function`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  

@@ -14,7 +14,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 2)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim PingResult As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;`PingResult = `[`GetPingResult`](GetPingResult)`(parameter)`  
+&nbsp;&nbsp;&nbsp;&nbsp;`PingResult = `[`GetPingResult`](GetPingResult.md)`(parameter)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim objWMI As Object`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim response1 As Object`  
@@ -34,7 +34,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 5).Value = "ONLINE"`  
 &nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If PingResult = "Request timed out" Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`LookupIp`](LookupIp)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`LookupIp`](LookupIp.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Else`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 6) = ""`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  

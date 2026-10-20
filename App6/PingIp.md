@@ -14,7 +14,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`'Ping -a 130.29.48.148`  
 &nbsp;&nbsp;&nbsp;&nbsp;`parameter = Cells(currentRow, 6)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun)` path & parameter, False`  
+&nbsp;&nbsp;&nbsp;&nbsp;[`ShellRun`](ShellRun.md)` path & parameter, False`  
 `End Sub`  
 
 

@@ -15,7 +15,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If curCell.EntireColumn.Hidden = False And curCell.EntireRow.Hidden = False Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`curCell.Select`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'MsgBox subName`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun)` "LstFil"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[`RobotRun`](RobotRun.md)` "LstFil"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Next curCell`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Exit Sub`  
@@ -29,9 +29,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`localFolder = Cells(currentRow, 9)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`keyword = Cells(currentRow, 13)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith)`(keyword, ".mp4") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`If True = `[`EndsWith`](EndsWith.md)`(keyword, ".mp4") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`keyword = Left(keyword, Len(keyword) - 3)`  
-&nbsp;&nbsp;&nbsp;&nbsp;`ElseIf True = `[`EndsWith`](EndsWith)`(keyword, ".webm") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`ElseIf True = `[`EndsWith`](EndsWith.md)`(keyword, ".webm") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`keyword = Left(keyword, Len(keyword) - 4)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -40,7 +40,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim act As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;`act = Cells(currentRow, 16)`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;`'    If `[`EndsWith`](EndsWith)`(localFolder, "\") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;`'    If `[`EndsWith`](EndsWith.md)`(localFolder, "\") Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'        localFolder = Left(localFolder, Len(localFolder) - 1)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`'    End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
@@ -58,8 +58,8 @@
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;`Dim fileList As Variant`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox keyword`  
-&nbsp;&nbsp;&nbsp;&nbsp;`' fileList = `[`GetFileList`](GetFileList)`(localFolder & keyword & "*")`  
-&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList)`(localFolder & "*" & keyword & "*")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`' fileList = `[`GetFileList`](GetFileList.md)`(localFolder & keyword & "*")`  
+&nbsp;&nbsp;&nbsp;&nbsp;`fileList = `[`GetFileList`](GetFileList.md)`(localFolder & "*" & keyword & "*")`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox TypeName(fileList)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox VarType(fileList)`  
 &nbsp;&nbsp;&nbsp;&nbsp;`' MsgBox Len(fileList)`  
@@ -73,8 +73,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;`For Each myFile In fileList`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'If CStr(myFile) <> currFilename Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Set myFileObj = fso.GetFile(localFolder & CStr(myFile))`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If myFileObj.DateLastModified > date1 And Not InStr(myFileObj.Name, ".temp") > 0 And Not InStr(myFileObj.Name, ".f") > 0 And False = `[`EndsWith`](EndsWith)`(myFileObj.Name, ".srt") And False = `[`EndsWith`](EndsWith)`(myFileObj.Name, ".vtt") And False = `[`EndsWith`](EndsWith)`(myFileObj.Name, ".lrc") And False = `[`EndsWith`](EndsWith)`(myFileObj.Name, ".part") And False = `[`EndsWith`](EndsWith)`(myFileObj.Name, ".ytdl") Then`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'And Not `[`EndsWith`](EndsWith)`(myFileObj.Name, ".opus") And Not `[`EndsWith`](EndsWith)`(myFileObj.Name, ".wma")`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If myFileObj.DateLastModified > date1 And Not InStr(myFileObj.Name, ".temp") > 0 And Not InStr(myFileObj.Name, ".f") > 0 And False = `[`EndsWith`](EndsWith.md)`(myFileObj.Name, ".srt") And False = `[`EndsWith`](EndsWith.md)`(myFileObj.Name, ".vtt") And False = `[`EndsWith`](EndsWith.md)`(myFileObj.Name, ".lrc") And False = `[`EndsWith`](EndsWith.md)`(myFileObj.Name, ".part") And False = `[`EndsWith`](EndsWith.md)`(myFileObj.Name, ".ytdl") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'And Not `[`EndsWith`](EndsWith.md)`(myFileObj.Name, ".opus") And Not `[`EndsWith`](EndsWith.md)`(myFileObj.Name, ".wma")`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`date1 = myFileObj.DateLastModified`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'If rtnType = 1 Then filename1 = myFile.path`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`'If rtnType = 2 Then filename1 = myFile.Name`  
@@ -98,18 +98,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 11) = Err.Description`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff)`("s", date0, date1) = 0 And False = `[`EndsWith`](EndsWith)`(keyword, "].") Then`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If `[`DateDiff`](DateDiff.md)`("s", date0, date1) = 0 And False = `[`EndsWith`](EndsWith.md)`(keyword, "].") Then`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim findStr As String`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Dim rplStr As String`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`findStr = `[`StrReverse`](StrReverse)`(CutStrByStartEnd(StrReverse(keyword), ".", "-", False, True))`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`findStr = `[`StrReverse`](StrReverse.md)`(CutStrByStartEnd(StrReverse(keyword), ".", "-", False, True))`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If Len(findStr) = 11 Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`findStr = "-" & findStr`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`If Len(findStr) = 12 Then`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`rplStr = " [" & Right(findStr, 11) & "]"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Cells(currentRow, 13) = Replace(Cells(currentRow, 13), findStr, rplStr)`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`LstFil`](LstFil)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Call `[`LstFil`](LstFil.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`End If`  
 &nbsp;  &nbsp;  &nbsp;  &nbsp;  
